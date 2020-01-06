@@ -30,8 +30,8 @@ all: documents.html
 documents:
 	mkdir -p $@
 
-documents/%.xml: documents sources/%.xml
-	mv sources/$*.{xml,html,txt,rxl} documents
+documents/%.xml: sources/%.xml | documents
+	cp -a sources/$*.{xml,html,txt,rxl,rfc.xml} documents
 
 %.xml %.html:	%.adoc | bundle
 	pushd $(dir $^); \
@@ -70,7 +70,7 @@ $(foreach FORMAT,$(FORMATS),$(eval $(FORMAT_TASKS)))
 open: open-html
 
 clean:
-	rm -rf documents published *_images sources/*.{rxl,xml,html,doc}
+	rm -rf documents published *_images sources/*.{rxl,xml,html,txt,rfc.xml}
 
 bundle:
 	if [ "x" == "${METANORMA_DOCKER}x" ]; then bundle; fi
