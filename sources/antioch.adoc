@@ -800,11 +800,35 @@ tag::bibliography1[]
 [bibliography]
 == Informative References
 
-* [[[grail_film,Grail]]] G. Chapman, J. Cleese, E. Idle, T. Gilliam, T. Jones, M. Palin. 1975. _Monty Python and the Holy Grail_.
 * [[[RFC2635,RFC 2635]]]
 * [[[RFC7990,RFC 7990]]]
 * [[[RFC8140,RFC 8140]]]
 * [[[RFC8174,RFC 8174]]]
+
+[%bibitem]
+== Monty Python and the Holy Grail
+id:: grail_film
+contributor::
+contributor.person.name.initial:: G.
+contributor.person.name.surname:: Chapman
+contributor::
+contributor.person.name.initial:: J.
+contributor.person.name.surname:: Cleese
+contributor::
+contributor.person.name.initial:: E.
+contributor.person.name.surname:: Idle
+contributor::
+contributor.person.name.initial:: T.
+contributor.person.name.surname:: Gilliam
+contributor::
+contributor.person.name.initial:: T.
+contributor.person.name.surname:: Jones
+contributor::
+contributor.person.name.initial:: M.
+contributor.person.name.surname:: Palin
+date::
+date.type:: published
+date.value:: 1975
 
 
 ////

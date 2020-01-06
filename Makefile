@@ -70,7 +70,7 @@ $(foreach FORMAT,$(FORMATS),$(eval $(FORMAT_TASKS)))
 open: open-html
 
 clean:
-	rm -rf documents published *_images sources/*.{rxl,xml,html,txt}
+	rm -rf documents published *_images sources/*.{rxl,xml,html,doc}
 
 bundle:
 	if [ "x" == "${METANORMA_DOCKER}x" ]; then bundle; fi

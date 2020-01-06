@@ -1,0 +1,8 @@
+---
+metanorma:
+  deploy:
+    email: "travis-ci@metanorma.org"
+relaton:
+  collection:
+    name: Metanorma-IETF sample documents
+    organization: Internet Engineering Task Force
