@@ -1,4 +1,4 @@
-= Metanorma IEC samples
+= Metanorma IETF samples
 
 image:https://github.com/metanorma/mn-samples-ietf/workflows/ubuntu/badge.svg["Build Status", link="https://github.com/metanorma/mn-samples-ietf/actions?workflow=ubuntu"]
 image:https://github.com/metanorma/mn-samples-ietf/workflows/macos/badge.svg["Build Status", link="https://github.com/metanorma/mn-samples-ietf/actions?workflow=macos"]
@@ -7,7 +7,7 @@ image:https://github.com/metanorma/mn-samples-ietf/workflows/docker/badge.svg["B
 
 This document is available in its rendered forms here:
 
-* https://metanorma.github.io/mn-samples-ietf/[Metanorma IEC samples (HTML)]
+* https://metanorma.github.io/mn-samples-ietf/[Metanorma IETF samples (HTML)]
 
 
 == Fetching the document
@@ -48,7 +48,7 @@ make clean all
 
 The following outputs will be built:
 
-* ISO/IEC XML (https://github.com/metanorma/metanorma-model-iso) (`[filename].xml`)
+* Metanorma XML (https://github.com/metanorma/metanorma-model-iso) (`[filename].xml`)
 * RFC XML v3 (`[filename].rfc.xml`)
 * HTML (`[filename].html`)
 * TXT (`[filename].txt`)
