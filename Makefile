@@ -26,7 +26,7 @@ endif
 _OUT_FILES := $(foreach FORMAT,$(FORMATS),$(shell echo $(FORMAT) | tr '[:lower:]' '[:upper:]'))
 OUT_FILES  := $(foreach F,$(_OUT_FILES),$($F))
 
-all: documents.html
+all: documents.html 
 
 documents:
 	mkdir -p $@
@@ -37,7 +37,8 @@ metanormaxml:
 documents/%.xml: sources/%.xml | documents
 	cp -a sources/$*.{xml,html,txt,rxl,rfc.xml} documents
 
-metanormaxml/%.xml: sources/%.xml | metanormaxml
+metanormaxml/%.xml: sources/%.xml | metanormaxml documents
+	cp -a sources/$*.{xml,html,txt,rxl,rfc.xml} documents
 	cp -a sources/$*.xml metanormaxml
 
 %.xml %.html:	%.adoc | bundle
