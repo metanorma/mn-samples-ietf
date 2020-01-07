@@ -24,8 +24,9 @@ Arthur son of Uther Pendragon
 :comments: yes
 :notedraftinprogress: yes
 :smart-quotes: false
-:docfile: draft-camelot-holy-grenade.adoc
+:docfile: antioch.adoc
 :mn-document-class: ietf
+:mn-output-extensions: rfc,xml,txt,html,nits
 
 ////
 [.comment]
