@@ -13,6 +13,7 @@ FORMATS := $(shell grep "$(FORMAT_MARKER)" $(SRC) | cut -f 2 -d " " | tr "," "\\
 
 INPUT_XML  := $(patsubst %.adoc,%.xml,$(SRC))
 OUTPUT_XML  := $(patsubst sources/%,documents/%,$(patsubst %.adoc,%.xml,$(SRC)))
+MN_XML  := $(patsubst sources/%,metanormaxml/%,$(patsubst %.adoc,%.xml,$(SRC)))
 OUTPUT_HTML := $(patsubst %.xml,%.html,$(OUTPUT_XML))
 
 ifdef METANORMA_DOCKER
@@ -30,8 +31,14 @@ all: documents.html
 documents:
 	mkdir -p $@
 
+metanormaxml:
+	mkdir -p $@
+
 documents/%.xml: sources/%.xml | documents
 	cp -a sources/$*.{xml,html,txt,rxl,rfc.xml} documents
+
+metanormaxml/%.xml: sources/%.xml | metanormaxml
+	cp -a sources/$*.xml metanormaxml
 
 %.xml %.html:	%.adoc | bundle
 	pushd $(dir $^); \
@@ -39,11 +46,11 @@ documents/%.xml: sources/%.xml | documents
 	${PREFIX_CMD} metanorma $$FILENAME; \
 	popd
 
-documents.rxl: $(OUTPUT_XML)
+documents.rxl: $(MN_XML)
 	${PREFIX_CMD} relaton concatenate \
 	  -t "$(shell yq r metanorma.yml relaton.collection.name)" \
 		-g "$(shell yq r metanorma.yml relaton.collection.organization)" \
-		documents $@
+		metanormaxml $@
 
 documents.html: documents.rxl
 	${PREFIX_CMD} relaton xml2html documents.rxl
@@ -58,6 +65,7 @@ open-$(FORMAT):
 
 clean-$(FORMAT):
 	rm -f $$(OUT_FILES-$(FORMAT))
+	rm -f $$(MN-$(FORMAT))
 
 $(FORMAT): clean-$(FORMAT) $$(OUT_FILES-$(FORMAT))
 

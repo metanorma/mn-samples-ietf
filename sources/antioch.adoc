@@ -26,7 +26,7 @@ Arthur son of Uther Pendragon
 :smart-quotes: false
 :docfile: antioch.adoc
 :mn-document-class: ietf
-:mn-output-extensions: rfc,xml,txt,html,nits
+:mn-output-extensions: rfc,xml,txt,html,nits,rxl
 
 ////
 [.comment]
