@@ -31,7 +31,7 @@ documents:
 	mkdir -p $@
 
 documents/%.xml: documents sources/%.xml
-	mv sources/$*.{xml,html,txt,rxl} documents
+	mv sources/$*.{xml,rfc.xml,html,txt,rxl} documents
 
 %.xml %.html:	%.adoc | bundle
 	pushd $(dir $^); \
