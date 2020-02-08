@@ -2,7 +2,10 @@
 # use ci-master https://github.com/metanorma/metanorma-build-scripts
 name: macos
 
-on: [push, pull_request]
+on:
+  push:
+    branches: [ master ]
+  pull_request:
 
 jobs:
   test-macos:
@@ -14,6 +17,12 @@ jobs:
         ruby: [ '2.6', '2.5', '2.4' ]
     steps:
       - uses: actions/checkout@master
+      - name: Checkout submodules
+        shell: bash
+        run: |
+          auth_header="$(git config --local --get http.https://github.com/.extraheader)"
+          git submodule sync --recursive
+          git -c "http.extraheader=$auth_header" -c protocol.version=2 submodule update --init --force --recursive --depth=1
       - name: Use Ruby
         uses: actions/setup-ruby@v1
         with:
@@ -21,8 +30,7 @@ jobs:
           architecture: 'x64'
       - name: Update gems
         run: |
-          sudo gem install bundler -v "~> 2" --force
-          bundle update --bundler
+          sudo gem install bundler
           bundle install --jobs 4 --retry 3
       - name: Use Metanorma
         run: |
@@ -32,4 +40,4 @@ jobs:
           JAVA_OPTS: "java.awt.headless=true"
         run: |
           export COMMIT_AUTHOR_EMAIL="$(yq r metanorma.yml metanorma.deploy.email)"
-          make clean all publish
+          make clean all
