@@ -6,6 +6,10 @@ IGNORE := $(shell mkdir -p $(HOME)/.cache/xml2rfc)
 SRC := $(shell yq r metanorma.yml metanorma.source.files | cut -c 3-999)
 ifeq ($(SRC),ll)
 SRC := $(filter-out README.adoc, $(wildcard sources/*.adoc))
+else
+ifeq ($(SRC),)
+SRC := $(filter-out README.adoc, $(wildcard sources/*.adoc))
+endif
 endif
 
 FORMAT_MARKER := mn-output-
@@ -18,7 +22,6 @@ OUTPUT_HTML := $(patsubst %.xml,%.html,$(OUTPUT_XML))
 
 ifdef METANORMA_DOCKER
   PREFIX_CMD := echo "Running via docker..."; docker run -v "$$(pwd)":/metanorma/ $(METANORMA_DOCKER)
-
 else
   PREFIX_CMD := echo "Running locally..."; bundle exec
 endif
@@ -48,6 +51,8 @@ metanormaxml/%.xml: sources/%.xml | metanormaxml documents
 	popd
 
 documents.rxl: $(MN_XML)
+	@echo SRC=$(SRC)
+	@echo MN_XML=$(MN_XML)
 	${PREFIX_CMD} relaton concatenate \
 	  -t "$(shell yq r metanorma.yml relaton.collection.name)" \
 		-g "$(shell yq r metanorma.yml relaton.collection.organization)" \
