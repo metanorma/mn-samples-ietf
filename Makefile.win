@@ -44,7 +44,7 @@ documents:
 	mkdir $@
 
 documents/%.xml: documents sources/images sources/%.xml
-	cp sources/$(addsuffix .*,$*) documents
+	mv sources/$(addsuffix .*,$*) documents
 
 %.xml %.html: %.adoc | bundle
 	${COMPILE_CMD} $^
