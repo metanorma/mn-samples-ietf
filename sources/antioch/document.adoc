@@ -572,7 +572,10 @@ end::figure2[]
 [[sovereign-orb]]
 .The Sovereign's Orb made invisible
 [link=https://upload.wikimedia.org/wikipedia/commons/b/bf/Coa_Illustration_Elements_Globus_cruciger.svg,align=right]
-image::https://upload.wikimedia.org/wikipedia/commons/b/bf/Coa_Illustration_Elements_Globus_cruciger.svg[Orb,124,135]
+//image::https://upload.wikimedia.org/wikipedia/commons/b/bf/Coa_Illustration_Elements_Globus_cruciger.svg[Orb,124,135]
+....
+SEE https://upload.wikimedia.org/wikipedia/commons/b/bf/Coa_Illustration_Elements_Globus_cruciger.svg
+....
 
 ////
 [.comment]
