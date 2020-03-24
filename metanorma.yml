@@ -2,6 +2,18 @@
 metanorma:
   deploy:
     email: "travis-ci@metanorma.org"
+  formats:
+    - xml
+    - rxl
+    - html
+    - doc
+    - pdf
+  source:
+    built_targets:
+      sources/antioch.xml: sources/antioch/document.adoc
+      sources/antioch-v2.xml: sources/antioch-v2/document.adoc
+      sources/example.xml: sources/example/document.adoc
+      sources/example-v2.xml: sources/example-v2/document.adoc
 relaton:
   collection:
     name: Metanorma-IETF sample documents
