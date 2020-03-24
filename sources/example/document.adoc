@@ -33,6 +33,7 @@ David Waitzman <dwaitzman@BBN.COM>; Nick Nicholas <opoudjis@gmail.com>
 :email_2: opoudjis@gmail.com
 :mn-document-class: ietf
 :mn-output-extensions: xml,rfc,txt,html,nits,rxl
+:docfile: document.adoc
 
 Avian carriers can provide high delay, low throughput, and low
 altitude service.  The connection topology is limited to a single
