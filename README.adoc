@@ -62,3 +62,12 @@ make html
 open *.html
 ----
 
+
+== Notes
+
+WARNING: RFC XML v2 is no longer supported by Metanorma.
+
+The Metanorma-IETF v2 documents provided here are purely for reference:
+
+* `sources/antioch-v2/document.adoc`
+* `sources/example-v2/document.adoc`

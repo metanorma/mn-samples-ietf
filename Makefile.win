@@ -13,7 +13,7 @@ SRC :=
 endif
 
 ifeq ($(SRC),)
-BUILT := $(shell yq r metanorma.yml metanorma.source.built_targets | cut -d ":" -f 1 | tr -s "\\n" " ")
+BUILT := $(subst ${ },${\n},$(shell yq r metanorma.yml metanorma.source.built_targets | cut -d ":" -f 1))
 
 ifeq ($(BUILT),null)
 SRC :=
@@ -29,10 +29,10 @@ XML := $(patsubst sources/%,documents/%,$(BUILT))
 endif
 endif
 
-FORMATS := $(shell yq r metanorma.yml metanorma.formats | tr -d '[:space:]'' | tr -s "-" " ")
+FORMATS := $(subst ${-},${ },$(strip $(shell yq r metanorma.yml metanorma.formats)))
 ifeq ($(FORMATS),)
 FORMAT_MARKER := mn-output-
-FORMATS := $(shell grep "$(FORMAT_MARKER)" $(SRC) | cut -f 2 -d " " | tr "," "\\n" | sort | uniq | tr "\\n" " ")
+FORMATS := $(shell grep "$(FORMAT_MARKER)" $(SRC) | cut -f 2 -d " " | tr "," "\n" | sort | uniq | tr "\n" " ")
 endif
 
 XML  ?= $(patsubst sources/%,documents/%,$(patsubst %.adoc,%.xml,$(SRC)))
@@ -51,6 +51,7 @@ OUT_FILES  := $(foreach F,$(_OUT_FILES),$($F))
 all: documents.html
 	echo "src $(SRC)"
 	echo "xml $(XML)"
+	echo "formats $(FORMATS)"
 
 documents:
 	setlocal enableextensions & md $@ & endlocal
@@ -65,18 +66,18 @@ documents/%.xml: sources/%.xml | documents
 # If XML file is provided, copy it over
 # Otherwise, build the xml using adoc
 sources/%.xml: | bundle
-	$(eval BUILT_TARGET := $(subst /,\\,$(shell yq r metanorma.yml metanorma.source.built_targets[$@])))
+	$(eval BUILT_TARGET := $(subst /,\,$(shell yq r metanorma.yml metanorma.source.built_targets[$@])))
 	if NOT "$(BUILT_TARGET)" == "null" ( \
 		if exist "$(BUILT_TARGET)" ( \
 			if "$(suffix $(BUILT_TARGET))" == ".xml" ( \
-				cp "$(BUILT_TARGET)" $@ \
+				copy "$(BUILT_TARGET)" $@ \
 			) else ( \
 				$(PREFIX_CMD) metanorma $(BUILT_TARGET) & \
-				cp "$(subst adoc,xml,${BUILT_TARGET})" $@ \
+				copy "$(subst adoc,xml,${BUILT_TARGET})" $@ \
 			) \
 		) else ( \
 			$(PREFIX_CMD) metanorma $(BUILT_TARGET) & \
-			cp "$(subst adoc,xml,${BUILT_TARGET})" $@ \
+			copy "$(subst adoc,xml,${BUILT_TARGET})" $@ \
 		) \
 	)
 
@@ -111,8 +112,10 @@ $(foreach FORMAT,$(FORMATS),$(eval $(FORMAT_TASKS)))
 open: open-html
 
 clean:
-	rd /s /q documents published
-	del /q *_images documents.* $(OUT_FILES)
+	rm -rf $(OUT_FILES)
+	del /q documents published
+	del /q *_images
+	del /q documents.*
 
 bundle:
 	IF "" == "%METANORMA_DOCKER%" bundle
@@ -153,7 +156,7 @@ endif
 serve: $(NODE_BIN_DIR)/live-server revealjs-css reveal.js
 	set port=$(PORT) & \
 	for /r %%html in $(HTML) do ( \
-		$< --entry-file=%%html --port=$(PORT) --ignore="*.html,*.xml,Makefile,Gemfile.*,package.*.json" --wait=1000 & \
+		$< --entry-file=%%html --port=%port% --ignore="*.html,*.xml,Makefile,Gemfile.*,package.*.json" --wait=1000 & \
 		set /A port=%port%+1 \
 	)
 
@@ -168,5 +171,5 @@ publish: published
 
 published: documents.html
 	setlocal enableextensions & md $@ & endlocal
-	cp -a documents $@/ &&
-	cp $< $@/index.html;
+	copy documents $@/
+	copy $< $@/index.html
