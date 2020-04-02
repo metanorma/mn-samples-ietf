@@ -53,4 +53,4 @@ jobs:
           Invoke-WebRequest -Uri "https://github.com/mikefarah/yq/releases/download/2.4.0/yq_windows_amd64.exe " -OutFile ".\yq.exe"
       - name: Metanorma compile
         run: |
-          make -f Makefile.win clean all
+          make -f Makefile.win clean all SHELL=cmd
