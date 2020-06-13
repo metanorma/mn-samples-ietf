@@ -47,7 +47,7 @@ as well as "Spamalot", the musical inspired by the movie.
 .Spamalot
 The relevance of the musical "Spamalot" to Internet lore should be
 obvious to the reader; but in case of doubt, see also
-Section 1 ("What is Spam*?") of <<RFC2635>>.
+<<RFC2635#section-1,of,section=1>>.
 
 ////
 // end::preamble[]
@@ -74,7 +74,7 @@ when, and only when, they appear in all capitals, as shown here.
 :sectnums:
 == Introduction
 
-<<RFC8140>> refers to the intended move of RFC formatting to
+<<RFC8140,of,section=1>> refers to the intended move of RFC formatting to
 XML2RFC v3 <<RFC7990>>, in the following terms:
 
 ////
@@ -373,7 +373,7 @@ tag::relref1[]
 The *Killer Rabbit of Caerbannog*, that most formidable foe of
 the Knights and of all that is holy or carrot-like, has been
 depicted diversely in lay and in song. We venture to say,
-_contra_ the claim made in <<RFC8140,of,section=4.1>>,
+_contra_ the claim made in <<RFC8140,of,section=4.1,anchor=section-4.1>>,
 that the Killer Rabbit of Caerbannog truly is the most afeared
 of all the creatures. Short of sanctified ordnance such as
 <<holy_hand_grenade,format=title>>, there are few remedies
