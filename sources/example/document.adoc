@@ -5,7 +5,7 @@ David Waitzman <dwaitzman@BBN.COM>; Nick Nicholas <opoudjis@gmail.com>
 :obsoletes: RFC 1000;RFC 1200
 :updates: RFC 2010;RFC 2120
 :docnumber: 1149
-:intended-series: std
+:intended-series: full-standard
 :ipr: trust200902
 :area: Internet
 :workgroup: Network Working Group
@@ -14,6 +14,7 @@ David Waitzman <dwaitzman@BBN.COM>; Nick Nicholas <opoudjis@gmail.com>
 :organization: BBN STC
 :phone: (617) 873-4323
 :contributor-uri: http://bbn.com
+:consensus: true
 :street: 10 Moulton Street
 :city: Cambridge
 :code: MA 02238
@@ -87,7 +88,7 @@ Algorithm-Specific Fields for SM2DSA keys:
 *  MPI of an EC point representing a public key
 
 
-===  Definitions
+=== Definitions
 
 OSCCA-compliant:: All cryptographic algorithms used are compliant with OSCCA  regulations.
 SM2DSA:: The elliptic curve digital signature algorithm. <<ISO.IEC.10118-3>>
@@ -119,6 +120,24 @@ x_G = 32C4AE2C 1F198119 5F990446 6A39C994
 y_G = BC3736A2 F4F6779C 59BDCEE3 6B692153
       D0A9877C C62A4740 02DF32E5 2139F0A0
 ....
+
+== Code to launch spaceship
+
+[source,ruby]
+----
+<CODE BEGINS>
+module Foo
+  class Bar
+    def prepare_launch(spaceship, rocket)
+      spaceship.load_personnel
+      rocket.load(spaceship)
+      rocket
+    end
+  end
+end
+<CODE ENDS>
+----
+
 
 == Supported Algorithms
 
