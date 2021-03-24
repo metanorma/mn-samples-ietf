@@ -28,9 +28,9 @@ jobs:
 
       - uses: actions/cache@v2
         with:
-          path: ~/.cache/xml2rfc
-          key: xml2rfc
-          restore-keys: xml2rfc
+          path: ~/.metanorma-ietf-workgroup-cache.json
+          key: metanorma-ietf-workgroup-cache
+          restore-keys: metanorma-ietf-workgroup-cache
 
       - uses: actions/cache@v2
         with:

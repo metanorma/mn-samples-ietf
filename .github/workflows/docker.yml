@@ -32,6 +32,12 @@ jobs:
           key: fontist-docker
           restore-keys: fontist-docker
 
+      - uses: actions/cache@v2
+        with:
+          path: ~/.metanorma-ietf-workgroup-cache.json
+          key: metanorma-ietf-workgroup-cache
+          restore-keys: metanorma-ietf-workgroup-cache
+
       - run: curl -L --retry 3 https://raw.githubusercontent.com/metanorma/metanorma-build-scripts/master/gemfile-to-bundle-add.sh | bash
 
       - run: metanorma site generate . -o published -c metanorma.yml --agree-to-terms

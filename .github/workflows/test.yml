@@ -33,6 +33,18 @@ jobs:
           token: ${{ secrets.METANORMA_CI_PAT_TOKEN || github.token }}
           submodules: true
 
+      - uses: actions/cache@v2
+        with:
+          path: ~/.metanorma-ietf-workgroup-cache.json
+          key: metanorma-ietf-workgroup-cache
+          restore-keys: metanorma-ietf-workgroup-cache
+
+      - uses: actions/cache@v2
+        with:
+          path: ~/.fontist
+          key: fontist-${{ runner.os }}
+          restore-keys: fontist-${{ runner.os }}
+
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: ${{ matrix.ruby }}
