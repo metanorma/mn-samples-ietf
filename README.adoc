@@ -29,7 +29,7 @@ If you don't want to deal with local dependencies, use the docker:
 
 [source,sh]
 ----
-docker run -v "$(pwd)":/metanorma -w /metanorma -it metanorma/mn metanorma site generate . -o published -c metanorma.yml
+docker run -v "$(pwd)":/metanorma -w /metanorma -it metanorma/mn metanorma site generate --agree-to-terms
 ----
 
 
@@ -37,7 +37,7 @@ docker run -v "$(pwd)":/metanorma -w /metanorma -it metanorma/mn metanorma site 
 
 [source,sh]
 ----
-metanorma site generate . -o published -c metanorma.yml
+metanorma site generate --agree-to-terms
 ----
 
 
@@ -53,12 +53,12 @@ The following outputs will be built:
 
 [source,sh]
 ----
-make html
-open *.html
+metanorma site generate --agree-to-terms
+open site/index.html
 ----
 
 
-== Notes
+== DEPRECATED DOCUMENTS
 
 WARNING: RFC XML v2 is no longer supported by Metanorma.
 

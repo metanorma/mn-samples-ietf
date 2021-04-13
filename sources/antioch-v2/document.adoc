@@ -12,7 +12,7 @@ Arthur son of Uther Pendragon
 :ipr: trust200902
 :toc-include: true
 :sort-refs: true
-:revdate: 2018-04-15T00:00:00Z
+:revdate: 2018-04-15
 :fullname: Arthur son of Uther Pendragon
 :forename_initials: A.
 :lastname: Pendragon
@@ -28,7 +28,7 @@ Arthur son of Uther Pendragon
 :smart-quotes: false
 :docfile: document.adoc
 :mn-document-class: ietf
-:mn-output-extensions: xml,rfc,txt,html,nits,rxl
+:mn-output-extensions: xml,rfc,txt,html,rxl
 
 [abstract]
 The menagerie of beasts and artefacts depicted in RFC8140

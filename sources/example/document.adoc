@@ -10,7 +10,7 @@ David Waitzman <dwaitzman@BBN.COM>; Nick Nicholas <opoudjis@gmail.com>
 :area: Internet
 :workgroup: Network Working Group
 :keyword: this, that
-:revdate: 1990-04-01T00:00:00Z
+:revdate: 1990-04-01
 :organization: BBN STC
 :phone: (617) 873-4323
 :contributor-uri: http://bbn.com
@@ -25,7 +25,7 @@ David Waitzman <dwaitzman@BBN.COM>; Nick Nicholas <opoudjis@gmail.com>
 :code_2: MA 02238
 :contributor-uri_2: http://opoudjis.net
 :equivalent: http://example1.com
-:derived-from: https://www.rfc-editor.org/rfc/rfc1149.txt
+:derived-from: RFC 1149
 :surname: Waitzman
 :givenname: David
 :email: dwaitzman@BBN.COM

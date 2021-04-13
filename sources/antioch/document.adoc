@@ -1,5 +1,4 @@
 = The Holy Hand Grenade of Antioch
-Arthur son of Uther Pendragon
 :doctype: internet-draft
 :abbrev: Hand Grenade of Antioch
 :updates: RFC 8140
@@ -10,9 +9,7 @@ Arthur son of Uther Pendragon
 :area: General, Operations and Management
 :keyword: rabbits, grenades, antioch, camelot
 :ipr: trust200902
-:toc-include: true
-:sort-refs: true
-:revdate: 2018-04-15T00:00:00Z
+:revdate: 2018-04-15
 :fullname: Arthur son of Uther Pendragon
 :initials: A.
 :surname: Pendragon

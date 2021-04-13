@@ -10,7 +10,7 @@ David Waitzman <dwaitzman@BBN.COM>; Nick Nicholas <opoudjis@gmail.com>
 :area: Internet
 :workgroup: Network Working Group
 :keyword: this, that
-:revdate: 1990-04-01T00:00:00Z
+:revdate: 1990-04-01
 :affiliation: BBN STC
 :phone: (617) 873-4323
 :contributor-uri: http://bbn.com
@@ -25,7 +25,7 @@ David Waitzman <dwaitzman@BBN.COM>; Nick Nicholas <opoudjis@gmail.com>
 :contributor-uri_2: http://opoudjis.net
 :docfile: document.adoc
 :mn-document-class: ietf
-:mn-output-extensions: xml,rfc,txt,html,nits,rxl
+:mn-output-extensions: xml,rfc,txt,html,rxl
 
 [abstract]
 Avian carriers can provide high delay, low throughput, and low
