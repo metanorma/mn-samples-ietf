@@ -11,14 +11,14 @@ David Waitzman <dwaitzman@BBN.COM>; Nick Nicholas <opoudjis@gmail.com>
 :workgroup: Network Working Group
 :keyword: this, that
 :revdate: 1990-04-01
-:organization: BBN STC
+:affiliation: BBN STC
 :phone: (617) 873-4323
 :contributor-uri: http://bbn.com
 :consensus: true
 :street: 10 Moulton Street
 :city: Cambridge
 :code: MA 02238
-:organization_2: BBN STC
+:affiliation_2: BBN STC
 :phone_2: (617) 873-4323
 :street_2: 10 Moulton Street
 :city_2: Cambridge
