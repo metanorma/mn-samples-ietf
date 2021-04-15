@@ -9,29 +9,29 @@ David Waitzman <dwaitzman@BBN.COM>; Nick Nicholas <opoudjis@gmail.com>
 :ipr: trust200902
 :area: Internet
 :workgroup: Network Working Group
+:consensus: true
 :keyword: this, that
 :revdate: 1990-04-01
-:affiliation: BBN STC
-:phone: (617) 873-4323
-:contributor-uri: http://bbn.com
-:consensus: true
-:street: 10 Moulton Street
-:city: Cambridge
-:code: MA 02238
-:affiliation_2: BBN STC
-:phone_2: (617) 873-4323
-:street_2: 10 Moulton Street
-:city_2: Cambridge
-:code_2: MA 02238
-:contributor-uri_2: http://opoudjis.net
-:equivalent: http://example1.com
-:derived-from: RFC 1149
 :surname: Waitzman
 :givenname: David
 :email: dwaitzman@BBN.COM
+:affiliation: BBN STC
+:phone: (617) 873-4323
+:address: 10 Moulton Street + \
+Cambridge + \
+MA 02238
+:contributor-uri: http://bbn.com
 :surname_2: Nicholas
 :givenname_2: Nick
 :email_2: opoudjis@gmail.com
+:affiliation_2: BBN STC
+:phone_2: (617) 873-4323
+:address_2: 10 Moulton Street + \
+Cambridge + \
+MA 02238
+:contributor-uri_2: http://opoudjis.net
+:equivalent: http://example1.com
+:derived-from: RFC 1149
 :mn-document-class: ietf
 :mn-output-extensions: xml,rfc,txt,html,rxl
 :docfile: document.adoc

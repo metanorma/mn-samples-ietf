@@ -17,8 +17,8 @@ Arthur son of Uther Pendragon
 :forename_initials: A.
 :lastname: Pendragon
 :email: arthur.pendragon@ribose.com
-:organization: Camelot
-:uri: http://camelot.gov.example
+:affiliation: Camelot
+:contributor-uri: http://camelot.gov.example
 :street: Palace\ Camel Lot 1
 :city: Camelot
 :region: England

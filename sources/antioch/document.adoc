@@ -16,7 +16,9 @@
 :email: arthur.pendragon@ribose.com
 :affiliation: Camelot
 :contributor-uri: http://camelot.gov.example
-:address: Palace\ Camel Lot 1, Camelot, England, United Kingdom
+:address: Palace + \
+Camel Lot 1, Camelot, England + \
+United Kingdom
 :comments: yes
 :notedraftinprogress: yes
 :smart-quotes: false
