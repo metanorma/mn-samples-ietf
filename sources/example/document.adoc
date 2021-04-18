@@ -34,7 +34,6 @@ MA 02238
 :derived-from: RFC 1149
 :mn-document-class: ietf
 :mn-output-extensions: xml,rfc,txt,html,rxl
-:docfile: document.adoc
 
 Avian carriers can provide high delay, low throughput, and low
 altitude service.  The connection topology is limited to a single
