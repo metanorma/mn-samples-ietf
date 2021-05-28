@@ -14,36 +14,14 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        ruby: [ '2.4', '2.5', '2.6', '2.7' ]
+        ruby: [ '2.4', '2.5', '2.6', '2.7', '3.0' ]
         os: [ ubuntu-latest, windows-latest, macos-latest ]
         experimental: [ false ]
-        include:
-          - ruby: '3.0'
-            os: 'ubuntu-latest'
-            experimental: true
-          - ruby: '3.0'
-            os: 'windows-latest'
-            experimental: true
-          - ruby: '3.0'
-            os: 'macos-latest'
-            experimental: true
     steps:
       - uses: actions/checkout@v2
         with:
           token: ${{ secrets.METANORMA_CI_PAT_TOKEN || github.token }}
           submodules: true
-
-      - uses: actions/cache@v2
-        with:
-          path: ~/.metanorma-ietf-workgroup-cache.json
-          key: metanorma-ietf-workgroup-cache
-          restore-keys: metanorma-ietf-workgroup-cache
-
-      - uses: actions/cache@v2
-        with:
-          path: ~/.fontist
-          key: fontist-${{ runner.os }}
-          restore-keys: fontist-${{ runner.os }}
 
       - uses: ruby/setup-ruby@v1
         with:
@@ -74,4 +52,4 @@ jobs:
           os.system("gem install specific_install")
           os.system("gem specific_install -l https://github.com/{}.git -b {}".format(repo, branch))
 
-      - run: metanorma site generate . -o published -c metanorma.yml --agree-to-terms
+      - run: metanorma site generate --agree-to-terms

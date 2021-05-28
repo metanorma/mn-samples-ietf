@@ -32,20 +32,21 @@ jobs:
           key: fontist-docker
           restore-keys: fontist-docker
 
-      - uses: actions/cache@v2
+      - uses: metanorma/metanorma-build-scripts/gh-rubygems-setup-action@master
         with:
-          path: ~/.metanorma-ietf-workgroup-cache.json
-          key: metanorma-ietf-workgroup-cache
-          restore-keys: metanorma-ietf-workgroup-cache
+          token: ${{ secrets.METANORMA_CI_PAT_TOKEN }}
 
-      - run: curl -L --retry 3 https://raw.githubusercontent.com/metanorma/metanorma-build-scripts/master/gemfile-to-bundle-add.sh | bash
+      - run: |
+          curl -L --retry 3 https://raw.githubusercontent.com/metanorma/metanorma-build-scripts/master/gemfile-to-bundle-add.sh | bash
 
-      - run: metanorma site generate . -o published -c metanorma.yml --agree-to-terms
+      - uses: actions-mn/cli/site-gen@main
+        with:
+          agree-to-terms: true
 
       - uses: actions/upload-artifact@master
         with:
-          name: published
-          path: published
+          name: site
+          path: site
 
   deploy-gh-pages:
     if: github.ref == 'refs/heads/master'
@@ -56,12 +57,12 @@ jobs:
 
       - uses: actions/download-artifact@v1
         with:
-          name: published
+          name: site
 
       - uses: peaceiris/actions-gh-pages@v3
         with:
           deploy_key: ${{ secrets.GH_DEPLOY_KEY }}
-          publish_dir: ./published
+          publish_dir: ./site
           force_orphan: true
           user_name: ${{ github.actor }}
           user_email: ${{ format('{0}@users.noreply.github.com', github.actor) }}
