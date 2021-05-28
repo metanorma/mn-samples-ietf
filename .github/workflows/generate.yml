@@ -11,6 +11,7 @@ on:
       - .github/workflows/test.yml
       - .github/workflows/docker.yml
       - .github/workflows/docker-pres_xml.yml
+  workflow_dispatch:
 
 jobs:
   test-linux:
@@ -28,9 +29,9 @@ jobs:
 
       - uses: actions/cache@v2
         with:
-          path: ~/.metanorma-ietf-workgroup-cache.json
-          key: metanorma-ietf-workgroup-cache
-          restore-keys: metanorma-ietf-workgroup-cache
+          path: ~/.cache/xml2rfc
+          key: xml2rfc
+          restore-keys: xml2rfc
 
       - uses: actions/cache@v2
         with:
@@ -40,4 +41,6 @@ jobs:
 
       - uses: actions-mn/setup@master
 
-      - run: metanorma site generate . -o published -c metanorma.yml --agree-to-terms
+      - uses: actions-mn/cli/site-gen@main
+        with:
+          agree-to-terms: true
