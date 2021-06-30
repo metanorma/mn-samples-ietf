@@ -1,0 +1,2316 @@
+<!DOCTYPE html>
+<html lang="en" class="Internet-Draft ">
+<head>
+<meta charset="utf-8">
+<meta content="Common,Latin" name="scripts">
+<meta content="initial-scale=1.0" name="viewport">
+<title>The Holy Hand Grenade of Antioch</title>
+<meta content="Arthur son of Uther Pendragon" name="author">
+<meta content='
+       The menagerie of beasts and artefacts depicted in RFC8140
+may be usefully supplemented by other renowned figures of
+Internet and more general lore. This document extends the
+menagerie to the seminal fable of the
+"Holy Hand Grenade of Antioch", as depicted in the
+Monty Python film "Monty Python and the Holy Grail",
+as well as "Spamalot", the musical inspired by the movie. 
+    ' name="description">
+<meta content="xml2rfc 3.8.0" name="generator">
+<meta content="draft-camelot-holy-grenade-01" name="ietf.draft">
+<!-- Generator version information:
+  xml2rfc 3.8.0
+    Python 3.7.3
+    appdirs 1.4.4
+    ConfigArgParse 1.5
+    google-i18n-address 2.4.0
+    html5lib 1.1
+    intervaltree 3.1.0
+    Jinja2 2.11.3
+    kitchen 1.2.6
+    lxml 4.6.3
+    pycountry 20.7.3
+    pyflakes 2.3.1
+    PyYAML 5.4.1
+    requests 2.25.1
+    setuptools 57.0.0
+    six 1.16.0
+-->
+<link href="/__w/mn-samples-ietf/mn-samples-ietf/site/documents/antioch/document.rfc.xml" rel="alternate" type="application/rfc+xml">
+<link href="#copyright" rel="license">
+<style type="text/css">/*
+
+  NOTE: Changes at the bottom of this file overrides some earlier settings.
+
+  Once the style has stabilized and has been adopted as an official RFC style,
+  this can be consolidated so that style settings occur only in one place, but
+  for now the contents of this file consists first of the initial CSS work as
+  provided to the RFC Formatter (xml2rfc) work, followed by itemized and
+  commented changes found necssary during the development of the v3
+  formatters.
+
+*/
+
+/* fonts */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans'); /* Sans-serif */
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif'); /* Serif (print) */
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono'); /* Monospace */
+
+@viewport {
+  zoom: 1.0;
+  width: extend-to-zoom;
+}
+@-ms-viewport {
+  width: extend-to-zoom;
+  zoom: 1.0;
+}
+/* general and mobile first */
+html {
+}
+body {
+  max-width: 90%;
+  margin: 1.5em auto;
+  color: #222;
+  background-color: #fff;
+  font-size: 14px;
+  font-family: 'Noto Sans', Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+.ears {
+  display: none;
+}
+
+/* headings */
+#title, h1, h2, h3, h4, h5, h6 {
+  margin: 1em 0 0.5em;
+  font-weight: bold;
+  line-height: 1.3;
+}
+#title {
+  clear: both;
+  border-bottom: 1px solid #ddd;
+  margin: 0 0 0.5em 0;
+  padding: 1em 0 0.5em;
+}
+.author {
+  padding-bottom: 4px;
+}
+h1 {
+  font-size: 26px;
+  margin: 1em 0;
+}
+h2 {
+  font-size: 22px;
+  margin-top: -20px;  /* provide offset for in-page anchors */
+  padding-top: 33px;
+}
+h3 {
+  font-size: 18px;
+  margin-top: -36px;  /* provide offset for in-page anchors */
+  padding-top: 42px;
+}
+h4 {
+  font-size: 16px;
+  margin-top: -36px;  /* provide offset for in-page anchors */
+  padding-top: 42px;
+}
+h5, h6 {
+  font-size: 14px;
+}
+#n-copyright-notice {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+}
+/* general structure */
+p {
+  padding: 0;
+  margin: 0 0 1em 0;
+  text-align: left;
+}
+div, span {
+  position: relative;
+}
+div {
+  margin: 0;
+}
+.alignRight.art-text {
+  background-color: #f9f9f9;
+  border: 1px solid #eee;
+  border-radius: 3px;
+  padding: 1em 1em 0;
+  margin-bottom: 1.5em;
+}
+.alignRight.art-text pre {
+  padding: 0;
+}
+.alignRight {
+  margin: 1em 0;
+}
+.alignRight > *:first-child {
+  border: none;
+  margin: 0;
+  float: right;
+  clear: both;
+}
+.alignRight > *:nth-child(2) {
+  clear: both;
+  display: block;
+  border: none;
+}
+svg {
+  display: block;
+}
+.alignCenter.art-text {
+  background-color: #f9f9f9;
+  border: 1px solid #eee;
+  border-radius: 3px;
+  padding: 1em 1em 0;
+  margin-bottom: 1.5em;
+}
+.alignCenter.art-text pre {
+  padding: 0;
+}
+.alignCenter {
+  margin: 1em 0;
+}
+.alignCenter > *:first-child {
+  border: none;
+  /* this isn't optimal, but it's an existence proof.  PrinceXML doesn't
+     support flexbox yet.
+  */
+  display: table;
+  margin: 0 auto;
+}
+
+/* lists */
+ol, ul {
+  padding: 0;
+  margin: 0 0 1em 2em;
+}
+ol ol, ul ul, ol ul, ul ol {
+  margin-left: 1em;
+}
+li {
+  margin: 0 0 0.25em 0;
+}
+.ulCompact li {
+  margin: 0;
+}
+ul.empty, .ulEmpty {
+  list-style-type: none;
+}
+ul.empty li, .ulEmpty li {
+  margin-top: 0.5em;
+}
+ul.compact, .ulCompact,
+ol.compact, .olCompact {
+  line-height: 100%;
+  margin: 0 0 0 2em;
+}
+
+/* definition lists */
+dl {
+}
+dl > dt {
+  float: left;
+  margin-right: 1em;
+}
+/* 
+dl.nohang > dt {
+  float: none;
+}
+*/
+dl > dd {
+  margin-bottom: .8em;
+  min-height: 1.3em;
+}
+dl.compact > dd, .dlCompact > dd {
+  margin-bottom: 0em;
+}
+dl > dd > dl {
+  margin-top: 0.5em;
+  margin-bottom: 0em;
+}
+
+/* links */
+a {
+  text-decoration: none;
+}
+a[href] {
+  color: #22e; /* Arlen: WCAG 2019 */
+}
+a[href]:hover {
+  background-color: #f2f2f2;
+}
+figcaption a[href],
+a[href].selfRef {
+  color: #222;
+}
+/* XXX probably not this:
+a.selfRef:hover {
+  background-color: transparent;
+  cursor: default;
+} */
+
+/* Figures */
+tt, code, pre, code {
+  background-color: #f9f9f9;
+  font-family: 'Roboto Mono', monospace;
+}
+pre {
+  border: 1px solid #eee;
+  margin: 0;
+  padding: 1em;
+}
+img {
+  max-width: 100%;
+}
+figure {
+  margin: 0;
+}
+figure blockquote {
+  margin: 0.8em 0.4em 0.4em;
+}
+figcaption {
+  font-style: italic;
+  margin: 0 0 1em 0;
+}
+@media screen {
+  pre {
+    overflow-x: auto;
+    max-width: 100%;
+    max-width: calc(100% - 22px);
+  }
+}
+
+/* aside, blockquote */
+aside, blockquote {
+  margin-left: 0;
+  padding: 1.2em 2em;
+}
+blockquote {
+  background-color: #f9f9f9;
+  color: #111; /* Arlen: WCAG 2019 */
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  margin: 1em 0;
+}
+cite {
+  display: block;
+  text-align: right;
+  font-style: italic;
+}
+
+/* tables */
+table {
+  width: 100%;
+  margin: 0 0 1em;
+  border-collapse: collapse;
+  border: 1px solid #eee;
+}
+th, td {
+  text-align: left;
+  vertical-align: top;
+  padding: 0.5em 0.75em;
+}
+th {
+  text-align: left;
+  background-color: #e9e9e9;
+}
+tr:nth-child(2n+1) > td {
+  background-color: #f5f5f5;
+}
+table caption {
+  font-style: italic;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+table p {
+  /* XXX to avoid bottom margin on table row signifiers. If paragraphs should
+     be allowed within tables more generally, it would be far better to select on a class. */
+  margin: 0;
+}
+
+/* pilcrow */
+a.pilcrow {
+  color: #666; /* Arlen: AHDJ 2019 */
+  text-decoration: none;
+  visibility: hidden;
+  user-select: none;
+  -ms-user-select: none;
+  -o-user-select:none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+@media screen {
+  aside:hover > a.pilcrow,
+  p:hover > a.pilcrow,
+  blockquote:hover > a.pilcrow,
+  div:hover > a.pilcrow,
+  li:hover > a.pilcrow,
+  pre:hover > a.pilcrow {
+    visibility: visible;
+  }
+  a.pilcrow:hover {
+    background-color: transparent;
+  }
+}
+
+/* misc */
+hr {
+  border: 0;
+  border-top: 1px solid #eee;
+}
+.bcp14 {
+  font-variant: small-caps;
+}
+
+.role {
+  font-variant: all-small-caps;
+}
+
+/* info block */
+#identifiers {
+  margin: 0;
+  font-size: 0.9em;
+}
+#identifiers dt {
+  width: 3em;
+  clear: left;
+}
+#identifiers dd {
+  float: left;
+  margin-bottom: 0;
+}
+#identifiers .authors .author {
+  display: inline-block;
+  margin-right: 1.5em;
+}
+#identifiers .authors .org {
+  font-style: italic;
+}
+
+/* The prepared/rendered info at the very bottom of the page */
+.docInfo {
+  color: #666; /* Arlen: WCAG 2019 */
+  font-size: 0.9em;
+  font-style: italic;
+  margin-top: 2em;
+}
+.docInfo .prepared {
+  float: left;
+}
+.docInfo .prepared {
+  float: right;
+}
+
+/* table of contents */
+#toc  {
+  padding: 0.75em 0 2em 0;
+  margin-bottom: 1em;
+}
+nav.toc ul {
+  margin: 0 0.5em 0 0;
+  padding: 0;
+  list-style: none;
+}
+nav.toc li {
+  line-height: 1.3em;
+  margin: 0.75em 0;
+  padding-left: 1.2em;
+  text-indent: -1.2em;
+}
+/* references */
+.references dt {
+  text-align: right;
+  font-weight: bold;
+  min-width: 7em;
+}
+.references dd {
+  margin-left: 8em;
+  overflow: auto;
+}
+
+.refInstance {
+  margin-bottom: 1.25em;
+}
+
+.references .ascii {
+  margin-bottom: 0.25em;
+}
+
+/* index */
+.index ul {
+  margin: 0 0 0 1em;
+  padding: 0;
+  list-style: none;
+}
+.index ul ul {
+  margin: 0;
+}
+.index li {
+  margin: 0;
+  text-indent: -2em;
+  padding-left: 2em;
+  padding-bottom: 5px;
+}
+.indexIndex {
+  margin: 0.5em 0 1em;
+}
+.index a {
+  font-weight: 700;
+}
+/* make the index two-column on all but the smallest screens */
+@media (min-width: 600px) {
+  .index ul {
+    -moz-column-count: 2;
+    -moz-column-gap: 20px;
+  }
+  .index ul ul {
+    -moz-column-count: 1;
+    -moz-column-gap: 0;
+  }
+}
+
+/* authors */
+address.vcard {
+  font-style: normal;
+  margin: 1em 0;
+}
+
+address.vcard .nameRole {
+  font-weight: 700;
+  margin-left: 0;
+}
+address.vcard .label {
+  font-family: "Noto Sans",Arial,Helvetica,sans-serif;
+  margin: 0.5em 0;
+}
+address.vcard .type {
+  display: none;
+}
+.alternative-contact {
+  margin: 1.5em 0 1em;
+}
+hr.addr {
+  border-top: 1px dashed;
+  margin: 0;
+  color: #ddd;
+  max-width: calc(100% - 16px);
+}
+
+/* temporary notes */
+.rfcEditorRemove::before {
+  position: absolute;
+  top: 0.2em;
+  right: 0.2em;
+  padding: 0.2em;
+  content: "The RFC Editor will remove this note";
+  color: #9e2a00; /* Arlen: WCAG 2019 */
+  background-color: #ffd; /* Arlen: WCAG 2019 */
+}
+.rfcEditorRemove {
+  position: relative;
+  padding-top: 1.8em;
+  background-color: #ffd; /* Arlen: WCAG 2019 */
+  border-radius: 3px;
+}
+.cref {
+  background-color: #ffd; /* Arlen: WCAG 2019 */
+  padding: 2px 4px;
+}
+.crefSource {
+  font-style: italic;
+}
+/* alternative layout for smaller screens */
+@media screen and (max-width: 1023px) {
+  body {
+    padding-top: 2em;
+  }
+  #title {
+    padding: 1em 0;
+  }
+  h1 {
+    font-size: 24px;
+  }
+  h2 {
+    font-size: 20px;
+    margin-top: -18px;  /* provide offset for in-page anchors */
+    padding-top: 38px;
+  }
+  #identifiers dd {
+    max-width: 60%;
+  }
+  #toc {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    padding: 0;
+    margin: 0;
+    background-color: inherit;
+    border-bottom: 1px solid #ccc;
+  }
+  #toc h2 {
+    margin: -1px 0 0 0;
+    padding: 4px 0 4px 6px;
+    padding-right: 1em;
+    min-width: 190px;
+    font-size: 1.1em;
+    text-align: right;
+    background-color: #444;
+    color: white;
+    cursor: pointer;
+  }
+  #toc h2::before { /* css hamburger */
+    float: right;
+    position: relative;
+    width: 1em;
+    height: 1px;
+    left: -164px;
+    margin: 6px 0 0 0;
+    background: white none repeat scroll 0 0;
+    box-shadow: 0 4px 0 0 white, 0 8px 0 0 white;
+    content: "";
+  }
+  #toc nav {
+    display: none;
+    padding: 0.5em 1em 1em;
+    overflow: auto;
+    height: calc(100vh - 48px);
+    border-left: 1px solid #ddd;
+  }
+}
+
+/* alternative layout for wide screens */
+@media screen and (min-width: 1024px) {
+  body {
+    max-width: 724px;
+    margin: 42px auto;
+    padding-left: 1.5em;
+    padding-right: 29em;
+  }
+  #toc {
+    position: fixed;
+    top: 42px;
+    right: 42px;
+    width: 25%;
+    margin: 0;
+    padding: 0 1em;
+    z-index: 1;
+  }
+  #toc h2 {
+    border-top: none;
+    border-bottom: 1px solid #ddd;
+    font-size: 1em;
+    font-weight: normal;
+    margin: 0;
+    padding: 0.25em 1em 1em 0;
+  }
+  #toc nav {
+    display: block;
+    height: calc(90vh - 84px);
+    bottom: 0;
+    padding: 0.5em 0 0;
+    overflow: auto;
+  }
+  img { /* future proofing */
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* pagination */
+@media print {
+  body {
+
+    width: 100%;
+  }
+  p {
+    orphans: 3;
+    widows: 3;
+  }
+  #n-copyright-notice {
+    border-bottom: none;
+  }
+  #toc, #n-introduction {
+    page-break-before: always;
+  }
+  #toc {
+    border-top: none;
+    padding-top: 0;
+  }
+  figure, pre {
+    page-break-inside: avoid;
+  }
+  figure {
+    overflow: scroll;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+  }
+  h2+*, h3+*, h4+*, h5+*, h6+* {
+    page-break-before: avoid;
+  }
+  pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-size: 10pt;
+  }
+  table {
+    border: 1px solid #ddd;
+  }
+  td {
+    border-top: 1px solid #ddd;
+  }
+}
+
+/* This is commented out here, as the string-set: doesn't
+   pass W3C validation currently */
+/*
+.ears thead .left {
+  string-set: ears-top-left content();
+}
+
+.ears thead .center {
+  string-set: ears-top-center content();
+}
+
+.ears thead .right {
+  string-set: ears-top-right content();
+}
+
+.ears tfoot .left {
+  string-set: ears-bottom-left content();
+}
+
+.ears tfoot .center {
+  string-set: ears-bottom-center content();
+}
+
+.ears tfoot .right {
+  string-set: ears-bottom-right content();
+}
+*/
+
+@page :first {
+  padding-top: 0;
+  @top-left {
+    content: normal;
+    border: none;
+  }
+  @top-center {
+    content: normal;
+    border: none;
+  }
+  @top-right {
+    content: normal;
+    border: none;
+  }
+}
+
+@page {
+  size: A4;
+  margin-bottom: 45mm;
+  padding-top: 20px;
+  /* The follwing is commented out here, but set appropriately by in code, as
+     the content depends on the document */
+  /*
+  @top-left {
+    content: 'Internet-Draft';
+    vertical-align: bottom;
+    border-bottom: solid 1px #ccc;
+  }
+  @top-left {
+    content: string(ears-top-left);
+    vertical-align: bottom;
+    border-bottom: solid 1px #ccc;
+  }
+  @top-center {
+    content: string(ears-top-center);
+    vertical-align: bottom;
+    border-bottom: solid 1px #ccc;
+  }
+  @top-right {
+    content: string(ears-top-right);
+    vertical-align: bottom;
+    border-bottom: solid 1px #ccc;
+  }
+  @bottom-left {
+    content: string(ears-bottom-left);
+    vertical-align: top;
+    border-top: solid 1px #ccc;
+  }
+  @bottom-center {
+    content: string(ears-bottom-center);
+    vertical-align: top;
+    border-top: solid 1px #ccc;
+  }
+  @bottom-right {
+      content: '[Page ' counter(page) ']';
+      vertical-align: top;
+      border-top: solid 1px #ccc;
+  }
+  */
+
+}
+
+/* Changes introduced to fix issues found during implementation */
+/* Make sure links are clickable even if overlapped by following H* */
+a {
+  z-index: 2;
+}
+/* Separate body from document info even without intervening H1 */
+section {
+  clear: both;
+}
+
+
+/* Top align author divs, to avoid names without organization dropping level with org names */
+.author {
+  vertical-align: top;
+}
+
+/* Leave room in document info to show Internet-Draft on one line */
+#identifiers dt {
+  width: 8em;
+}
+
+/* Don't waste quite as much whitespace between label and value in doc info */
+#identifiers dd {
+  margin-left: 1em;
+}
+
+/* Give floating toc a background color (needed when it's a div inside section */
+#toc {
+  background-color: white;
+}
+
+/* Make the collapsed ToC header render white on gray also when it's a link */
+@media screen and (max-width: 1023px) {
+  #toc h2 a,
+  #toc h2 a:link,
+  #toc h2 a:focus,
+  #toc h2 a:hover,
+  #toc a.toplink,
+  #toc a.toplink:hover {
+    color: white;
+    background-color: #444;
+    text-decoration: none;
+  }
+}
+
+/* Give the bottom of the ToC some whitespace */
+@media screen and (min-width: 1024px) {
+  #toc {
+    padding: 0 0 1em 1em;
+  }
+}
+
+/* Style section numbers with more space between number and title */
+.section-number {
+  padding-right: 0.5em;
+}
+
+/* prevent monospace from becoming overly large */
+tt, code, pre, code {
+  font-size: 95%;
+}
+
+/* Fix the height/width aspect for ascii art*/
+pre.sourcecode,
+.art-text pre {
+  line-height: 1.12;
+}
+
+
+/* Add styling for a link in the ToC that points to the top of the document */
+a.toplink {
+  float: right;
+  margin-right: 0.5em;
+}
+
+/* Fix the dl styling to match the RFC 7992 attributes */
+dl > dt,
+dl.dlParallel > dt {
+  float: left;
+  margin-right: 1em;
+}
+dl.dlNewline > dt {
+  float: none;
+}
+
+/* Provide styling for table cell text alignment */
+table td.text-left,
+table th.text-left {
+  text-align: left;
+}
+table td.text-center,
+table th.text-center {
+  text-align: center;
+}
+table td.text-right,
+table th.text-right {
+  text-align: right;
+}
+
+/* Make the alternative author contact informatio look less like just another
+   author, and group it closer with the primary author contact information */
+.alternative-contact {
+  margin: 0.5em 0 0.25em 0;
+}
+address .non-ascii {
+  margin: 0 0 0 2em;
+}
+
+/* With it being possible to set tables with alignment
+  left, center, and right, { width: 100%; } does not make sense */
+table {
+  width: auto;
+}
+
+/* Avoid reference text that sits in a block with very wide left margin,
+   because of a long floating dt label.*/
+.references dd {
+  overflow: visible;
+}
+
+/* Control caption placement */
+caption {
+  caption-side: bottom;
+}
+
+/* Limit the width of the author address vcard, so names in right-to-left
+   script don't end up on the other side of the page. */
+
+address.vcard {
+  max-width: 30em;
+  margin-right: auto;
+}
+
+/* For address alignment dependent on LTR or RTL scripts */
+address div.left {
+  text-align: left;
+}
+address div.right {
+  text-align: right;
+}
+
+/* Provide table alignment support.  We can't use the alignX classes above
+   since they do unwanted things with caption and other styling. */
+table.right {
+ margin-left: auto;
+ margin-right: 0;
+}
+table.center {
+ margin-left: auto;
+ margin-right: auto;
+}
+table.left {
+ margin-left: 0;
+ margin-right: auto;
+}
+
+/* Give the table caption label the same styling as the figcaption */
+caption a[href] {
+  color: #222;
+}
+
+@media print {
+  .toplink {
+    display: none;
+  }
+
+  /* avoid overwriting the top border line with the ToC header */
+  #toc {
+    padding-top: 1px;
+  }
+
+  /* Avoid page breaks inside dl and author address entries */
+  .vcard {
+    page-break-inside: avoid;
+  }
+
+}
+/* Tweak the bcp14 keyword presentation */
+.bcp14 {
+  font-variant: small-caps;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+/* Tweak the invisible space above H* in order not to overlay links in text above */
+ h2 {
+  margin-top: -18px;  /* provide offset for in-page anchors */
+  padding-top: 31px;
+ }
+ h3 {
+  margin-top: -18px;  /* provide offset for in-page anchors */
+  padding-top: 24px;
+ }
+ h4 {
+  margin-top: -18px;  /* provide offset for in-page anchors */
+  padding-top: 24px;
+ }
+/* Float artwork pilcrow to the right */
+@media screen {
+  .artwork a.pilcrow {
+    display: block;
+    line-height: 0.7;
+    margin-top: 0.15em;
+  }
+}
+/* Make pilcrows on dd visible */
+@media screen {
+  dd:hover > a.pilcrow {
+    visibility: visible;
+  }
+}
+/* Make the placement of figcaption match that of a table's caption
+   by removing the figure's added bottom margin */
+.alignLeft.art-text,
+.alignCenter.art-text,
+.alignRight.art-text {
+   margin-bottom: 0;
+}
+.alignLeft,
+.alignCenter,
+.alignRight {
+  margin: 1em 0 0 0;
+}
+/* In print, the pilcrow won't show on hover, so prevent it from taking up space,
+   possibly even requiring a new line */
+@media print {
+  a.pilcrow {
+    display: none;
+  }
+}
+/* Styling for the external metadata */
+div#external-metadata {
+  background-color: #eee;
+  padding: 0.5em;
+  margin-bottom: 0.5em;
+  display: none;
+}
+div#internal-metadata {
+  padding: 0.5em;                       /* to match the external-metadata padding */
+}
+/* Styling for title RFC Number */
+h1#rfcnum {
+  clear: both;
+  margin: 0 0 -1em;
+  padding: 1em 0 0 0;
+}
+/* Make .olPercent look the same as <ol><li> */
+dl.olPercent > dd {
+  margin-bottom: 0.25em;
+  min-height: initial;
+}
+/* Give aside some styling to set it apart */
+aside {
+  border-left: 1px solid #ddd;
+  margin: 1em 0 1em 2em;
+  padding: 0.2em 2em;
+}
+aside > dl,
+aside > ol,
+aside > ul,
+aside > table,
+aside > p {
+  margin-bottom: 0.5em;
+}
+/* Additional page break settings */
+@media print {
+  figcaption, table caption {
+    page-break-before: avoid;
+  }
+}
+/* Font size adjustments for print */
+@media print {
+  body  { font-size: 10pt;      line-height: normal; max-width: 96%; }
+  h1    { font-size: 1.72em;    padding-top: 1.5em; } /* 1*1.2*1.2*1.2 */
+  h2    { font-size: 1.44em;    padding-top: 1.5em; } /* 1*1.2*1.2 */
+  h3    { font-size: 1.2em;     padding-top: 1.5em; } /* 1*1.2 */
+  h4    { font-size: 1em;       padding-top: 1.5em; }
+  h5, h6 { font-size: 1em;      margin: initial; padding: 0.5em 0 0.3em; }
+}
+/* Sourcecode margin in print, when there's no pilcrow */
+@media print {
+  .artwork,
+  .sourcecode {
+    margin-bottom: 1em;
+  }
+}
+/* Avoid narrow tables forcing too narrow table captions, which may render badly */
+table {
+  min-width: 20em;
+}
+/* ol type a */
+ol.type-a { list-style-type: lower-alpha; }
+ol.type-A { list-style-type: upper-alpha; }
+ol.type-i { list-style-type: lower-roman; }
+ol.type-I { list-style-type: lower-roman; }
+/* Apply the print table and row borders in general, on request from the RPC,
+and increase the contrast between border and odd row background sligthtly */
+table {
+  border: 1px solid #ddd;
+}
+td {
+  border-top: 1px solid #ddd;
+}
+tr:nth-child(2n+1) > td {
+  background-color: #f8f8f8;
+}
+/* Use style rules to govern display of the TOC. */
+@media screen and (max-width: 1023px) {
+  #toc nav { display: none; }
+  #toc.active nav { display: block; }
+}
+/* Add support for keepWithNext */
+.keepWithNext {
+  break-after: avoid-page;
+  break-after: avoid-page;
+}
+/* Add support for keepWithPrevious */
+.keepWithPrevious {
+  break-before: avoid-page;
+}
+/* Change the approach to avoiding breaks inside artwork etc. */
+figure, pre, table, .artwork, .sourcecode  {
+  break-before: avoid-page;
+  break-after: auto;
+}
+/* Avoid breaks between <dt> and <dd> */
+dl {
+  break-before: auto;
+  break-inside: auto;
+}
+dt {
+  break-before: auto;
+  break-after: avoid-page;
+}
+dd {
+  break-before: avoid-page;
+  break-after: auto;
+  orphans: 3;
+  widows: 3
+}
+span.break, dd.break {
+  margin-bottom: 0;
+  min-height: 0;
+  break-before: auto;
+  break-inside: auto;
+  break-after: auto;
+}
+/* Undo break-before ToC */
+@media print {
+  #toc {
+    break-before: auto;
+  }
+}
+/* Text in compact lists should not get extra bottim margin space,
+   since that would makes the list not compact */
+ul.compact p, .ulCompact p,
+ol.compact p, .olCompact p {
+ margin: 0;
+}
+/* But the list as a whole needs the extra space at the end */
+section ul.compact,
+section .ulCompact,
+section ol.compact,
+section .olCompact {
+  margin-bottom: 1em;                    /* same as p not within ul.compact etc. */
+}
+/* The tt and code background above interferes with for instance table cell
+   backgrounds.  Changed to something a bit more selective. */
+tt, code {
+  background-color: transparent;
+}
+p tt, p code, li tt, li code {
+  background-color: #f8f8f8;
+}
+/* Tweak the pre margin -- 0px doesn't come out well */
+pre {
+   margin-top: 0.5px;
+}
+/* Tweak the comact list text */
+ul.compact, .ulCompact,
+ol.compact, .olCompact,
+dl.compact, .dlCompact {
+  line-height: normal;
+}
+/* Don't add top margin for nested lists */
+li > ul, li > ol, li > dl,
+dd > ul, dd > ol, dd > dl,
+dl > dd > dl {
+  margin-top: initial;
+}
+/* Elements that should not be rendered on the same line as a <dt> */
+/* This should match the element list in writer.text.TextWriter.render_dl() */
+dd > div.artwork:first-child,
+dd > aside:first-child,
+dd > figure:first-child,
+dd > ol:first-child,
+dd > div:first-child > pre.sourcecode,
+dd > table:first-child,
+dd > ul:first-child {
+  clear: left;
+}
+/* fix for weird browser behaviour when <dd/> is empty */
+dt+dd:empty::before{
+  content: "\00a0";
+}
+/* Make paragraph spacing inside <li> smaller than in body text, to fit better within the list */
+li > p {
+  margin-bottom: 0.5em
+}
+/* Don't let p margin spill out from inside list items */
+li > p:last-of-type {
+  margin-bottom: 0;
+}
+</style>
+<link href="rfc-local.css" rel="stylesheet" type="text/css">
+<script type="application/javascript">async function addMetadata(){try{const e=document.styleSheets[0].cssRules;for(let t=0;t<e.length;t++)if(/#identifiers/.exec(e[t].selectorText)){const a=e[t].cssText.replace("#identifiers","#external-updates");document.styleSheets[0].insertRule(a,document.styleSheets[0].cssRules.length)}}catch(e){console.log(e)}const e=document.getElementById("external-metadata");if(e)try{var t,a="",o=function(e){const t=document.getElementsByTagName("meta");for(let a=0;a<t.length;a++)if(t[a].getAttribute("name")===e)return t[a].getAttribute("content");return""}("rfc.number");if(o){t="https://www.rfc-editor.org/rfc/rfc"+o+".json";try{const e=await fetch(t);a=await e.json()}catch(e){t=document.URL.indexOf("html")>=0?document.URL.replace(/html$/,"json"):document.URL+".json";const o=await fetch(t);a=await o.json()}}if(!a)return;e.style.display="block";const s="",d="https://datatracker.ietf.org/doc",n="https://datatracker.ietf.org/ipr/search",c="https://www.rfc-editor.org/info",l=a.doc_id.toLowerCase(),i=a.doc_id.slice(0,3).toLowerCase(),f=a.doc_id.slice(3).replace(/^0+/,""),u={status:"Status",obsoletes:"Obsoletes",obsoleted_by:"Obsoleted By",updates:"Updates",updated_by:"Updated By",see_also:"See Also",errata_url:"Errata"};let h="<dl style='overflow:hidden' id='external-updates'>";["status","obsoletes","obsoleted_by","updates","updated_by","see_also","errata_url"].forEach(e=>{if("status"==e){a[e]=a[e].toLowerCase();var t=a[e].split(" "),o=t.length,w="",p=1;for(let e=0;e<o;e++)p<o?w=w+r(t[e])+" ":w+=r(t[e]),p++;a[e]=w}else if("obsoletes"==e||"obsoleted_by"==e||"updates"==e||"updated_by"==e){var g,m="",b=1;g=a[e].length;for(let t=0;t<g;t++)a[e][t]&&(a[e][t]=String(a[e][t]).toLowerCase(),m=b<g?m+"<a href='"+s+"/rfc/".concat(a[e][t])+"'>"+a[e][t].slice(3)+"</a>, ":m+"<a href='"+s+"/rfc/".concat(a[e][t])+"'>"+a[e][t].slice(3)+"</a>",b++);a[e]=m}else if("see_also"==e){var y,L="",C=1;y=a[e].length;for(let t=0;t<y;t++)if(a[e][t]){a[e][t]=String(a[e][t]);var _=a[e][t].slice(0,3),v=a[e][t].slice(3).replace(/^0+/,"");L=C<y?"RFC"!=_?L+"<a href='"+s+"/info/"+_.toLowerCase().concat(v.toLowerCase())+"'>"+_+" "+v+"</a>, ":L+"<a href='"+s+"/info/"+_.toLowerCase().concat(v.toLowerCase())+"'>"+v+"</a>, ":"RFC"!=_?L+"<a href='"+s+"/info/"+_.toLowerCase().concat(v.toLowerCase())+"'>"+_+" "+v+"</a>":L+"<a href='"+s+"/info/"+_.toLowerCase().concat(v.toLowerCase())+"'>"+v+"</a>",C++}a[e]=L}else if("errata_url"==e){var R="";R=a[e]?R+"<a href='"+a[e]+"'>Errata exist</a> | <a href='"+d+"/"+l+"'>Datatracker</a>| <a href='"+n+"/?"+i+"="+f+"&submit="+i+"'>IPR</a> | <a href='"+c+"/"+l+"'>Info page</a>":"<a href='"+d+"/"+l+"'>Datatracker</a> | <a href='"+n+"/?"+i+"="+f+"&submit="+i+"'>IPR</a> | <a href='"+c+"/"+l+"'>Info page</a>",a[e]=R}""!=a[e]?"Errata"==u[e]?h+=`<dt>More info:</dt><dd>${a[e]}</dd>`:h+=`<dt>${u[e]}:</dt><dd>${a[e]}</dd>`:"Errata"==u[e]&&(h+=`<dt>More info:</dt><dd>${a[e]}</dd>`)}),h+="</dl>",e.innerHTML=h}catch(e){console.log(e)}else console.log("Could not locate metadata <div> element");function r(e){return e.charAt(0).toUpperCase()+e.slice(1)}}window.removeEventListener("load",addMetadata),window.addEventListener("load",addMetadata);</script>
+</head>
+<body>
+<script src="metadata.min.js"></script>
+<table class="ears">
+<thead><tr>
+<td class="left">Internet-Draft</td>
+<td class="center">Hand Grenade of Antioch</td>
+<td class="right">June 2021</td>
+</tr></thead>
+<tfoot><tr>
+<td class="left">Pendragon</td>
+<td class="center">Expires 1 January 2022</td>
+<td class="right">[Page]</td>
+</tr></tfoot>
+</table>
+<div id="external-metadata" class="document-information"></div>
+<div id="internal-metadata" class="document-information">
+<dl id="identifiers">
+<dt class="label-workgroup">Workgroup:</dt>
+<dd class="workgroup">Network Working Group</dd>
+<dt class="label-internet-draft">Internet-Draft:</dt>
+<dd class="internet-draft">draft-camelot-holy-grenade-01</dd>
+<dt class="label-">:</dt>
+<dd></dd>
+<dt class="label-updates">Updates:</dt>
+<dd class="updates">
+<a href="https://www.rfc-editor.org/rfc/rfcRFC%208140" class="eref">RFC 8140</a>, <a href="https://www.rfc-editor.org/rfc/rfcRFC8140" class="eref">RFC8140</a>, <a href="https://www.rfc-editor.org/rfc/rfc10.17487/RFC8140" class="eref">10.17487/RFC8140</a> (if approved)</dd>
+<dt class="label-published">Published:</dt>
+<dd class="published">
+<time datetime="2021-06-30" class="published">30 June 2021</time>
+    </dd>
+<dt class="label-intended-status">Intended Status:</dt>
+<dd class="intended-status">Informational</dd>
+<dt class="label-expires">Expires:</dt>
+<dd class="expires"><time datetime="2022-01-01">1 January 2022</time></dd>
+<dt class="label-authors">Author:</dt>
+<dd class="authors">
+<div class="author">
+      <div class="author-name">A. S. O. U. Pendragon</div>
+<div class="org">Camelot</div>
+</div>
+</dd>
+</dl>
+</div>
+<h1 id="title">The Holy Hand Grenade of Antioch</h1>
+<div id="_1a9fe9b5-1e4d-4aa3-8447-dbf7be6ab6b0">
+<section id="section-abstract">
+      <h2 id="abstract"><a href="#abstract" class="selfRef">Abstract</a></h2>
+<div id="_4d275e70-20d0-4a76-bfbe-c854ec8f2dd2">
+<p id="section-abstract-1">The menagerie of beasts and artefacts depicted in RFC8140
+may be usefully supplemented by other renowned figures of
+Internet and more general lore. This document extends the
+menagerie to the seminal fable of the
+"Holy Hand Grenade of Antioch", as depicted in the
+Monty Python film "Monty Python and the Holy Grail",
+as well as "Spamalot", the musical inspired by the movie.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
+</div>
+</section>
+</div>
+<section class="note" id="section-note.1">
+      <h2 id="name-spamalot">
+<a href="#name-spamalot" class="section-name selfRef">Spamalot</a>
+      </h2>
+<div id="_796ae3c7-6593-4bba-9d66-8bcede5cbcb2">
+<p id="section-note.1-1">The relevance of the musical "Spamalot" to Internet lore should be
+obvious to the reader; but in case of doubt, see also
+<span><a href="https://www.rfc-editor.org/info/section-1" class="relref">Section 1</a> of [<a href="#RFC2635" class="xref">RFC2635</a>]</span>.<a href="#section-note.1-1" class="pilcrow">¶</a></p>
+</div>
+</section>
+<div id="status-of-memo">
+<section id="section-boilerplate.1">
+        <h2 id="name-status-of-this-memo">
+<a href="#name-status-of-this-memo" class="section-name selfRef">Status of This Memo</a>
+        </h2>
+<p id="section-boilerplate.1-1">
+        This Internet-Draft is submitted in full conformance with the
+        provisions of BCP 78 and BCP 79.<a href="#section-boilerplate.1-1" class="pilcrow">¶</a></p>
+<p id="section-boilerplate.1-2">
+        Internet-Drafts are working documents of the Internet Engineering Task
+        Force (IETF). Note that other groups may also distribute working
+        documents as Internet-Drafts. The list of current Internet-Drafts is
+        at <span><a href="https://datatracker.ietf.org/drafts/current/">https://datatracker.ietf.org/drafts/current/</a></span>.<a href="#section-boilerplate.1-2" class="pilcrow">¶</a></p>
+<p id="section-boilerplate.1-3">
+        Internet-Drafts are draft documents valid for a maximum of six months
+        and may be updated, replaced, or obsoleted by other documents at any
+        time. It is inappropriate to use Internet-Drafts as reference
+        material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
+<p id="section-boilerplate.1-4">
+        This Internet-Draft will expire on 1 January 2022.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="copyright">
+<section id="section-boilerplate.2">
+        <h2 id="name-copyright-notice">
+<a href="#name-copyright-notice" class="section-name selfRef">Copyright Notice</a>
+        </h2>
+<p id="section-boilerplate.2-1">
+            Copyright (c) 2021 IETF Trust and the persons identified as the
+            document authors. All rights reserved.<a href="#section-boilerplate.2-1" class="pilcrow">¶</a></p>
+<p id="section-boilerplate.2-2">
+            This document is subject to BCP 78 and the IETF Trust's Legal
+            Provisions Relating to IETF Documents
+            (<span><a href="https://trustee.ietf.org/license-info">https://trustee.ietf.org/license-info</a></span>) in effect on the date of
+            publication of this document. Please review these documents
+            carefully, as they describe your rights and restrictions with
+            respect to this document.<a href="#section-boilerplate.2-2" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="toc">
+<section id="section-toc.1">
+        <a href="#" onclick="scroll(0,0)" class="toplink">▲</a><h2 id="name-table-of-contents">
+<a href="#name-table-of-contents" class="section-name selfRef">Table of Contents</a>
+        </h2>
+<nav class="toc"><ul class="ulEmpty compact toc">
+<li class="ulEmpty compact toc" id="section-toc.1-1.1">
+            <p id="section-toc.1-1.1.1" class="keepWithNext"><a href="#section-2" class="xref">2</a>.  <a href="#name-introduction" class="xref">Introduction</a></p>
+</li>
+          <li class="ulEmpty compact toc" id="section-toc.1-1.2">
+            <p id="section-toc.1-1.2.1" class="keepWithNext"><a href="#section-3" class="xref">3</a>.  <a href="#name-the-french-occupied-castle" class="xref">The French-occupied castle</a></p>
+</li>
+          <li class="ulEmpty compact toc" id="section-toc.1-1.3">
+            <p id="section-toc.1-1.3.1"><a href="#section-4" class="xref">4</a>.  <a href="#name-the-mythos-of-caerbannog" class="xref">The Mythos of Caerbannog</a></p>
+<ul class="ulEmpty compact toc">
+<li class="ulEmpty compact toc" id="section-toc.1-1.3.2.1">
+                <p id="section-toc.1-1.3.2.1.1" class="keepWithNext"><a href="#section-4.1" class="xref">4.1</a>.  <a href="#name-the-killer-rabbit-of-caerba" class="xref">The Killer Rabbit of Caerbannog</a></p>
+</li>
+              <li class="ulEmpty compact toc" id="section-toc.1-1.3.2.2">
+                <p id="section-toc.1-1.3.2.2.1"><a href="#section-4.2" class="xref">4.2</a>.  <a href="#name-holy-hand-grenade-of-antioc" class="xref">Holy Hand Grenade of Antioch</a></p>
+</li>
+            </ul>
+</li>
+          <li class="ulEmpty compact toc" id="section-toc.1-1.4">
+            <p id="section-toc.1-1.4.1"><a href="#section-5" class="xref">5</a>.  <a href="#name-dramatis-personae" class="xref">Dramatis Personae</a></p>
+<ul class="ulEmpty compact toc">
+<li class="ulEmpty compact toc" id="section-toc.1-1.4.2.1">
+                <p id="section-toc.1-1.4.2.1.1"><a href="#section-5.1" class="xref">5.1</a>.  <a href="#name-past-the-killer-rabbit" class="xref">Past the Killer Rabbit</a></p>
+</li>
+            </ul>
+</li>
+          <li class="ulEmpty compact toc" id="section-toc.1-1.5">
+            <p id="section-toc.1-1.5.1"><a href="#section-6" class="xref">6</a>.  <a href="#name-iana-considerations" class="xref">IANA Considerations</a></p>
+</li>
+          <li class="ulEmpty compact toc" id="section-toc.1-1.6">
+            <p id="section-toc.1-1.6.1"><a href="#section-7" class="xref">7</a>.  <a href="#name-security-considerations" class="xref">Security Considerations</a></p>
+</li>
+          <li class="ulEmpty compact toc" id="section-toc.1-1.7">
+            <p id="section-toc.1-1.7.1"><a href="#section-8" class="xref">8</a>.  <a href="#name-monty-python-and-the-holy-g" class="xref">Monty Python and the Holy Grail</a></p>
+</li>
+          <li class="ulEmpty compact toc" id="section-toc.1-1.8">
+            <p id="section-toc.1-1.8.1"><a href="#section-9" class="xref">9</a>.  <a href="#name-normative-references" class="xref">Normative References</a></p>
+</li>
+          <li class="ulEmpty compact toc" id="section-toc.1-1.9">
+            <p id="section-toc.1-1.9.1"><a href="#section-10" class="xref">10</a>. <a href="#name-informative-references" class="xref">Informative References</a></p>
+</li>
+          <li class="ulEmpty compact toc" id="section-toc.1-1.10">
+            <p id="section-toc.1-1.10.1"><a href="#section-appendix.a" class="xref"></a><a href="#name-index" class="xref">Index</a></p>
+</li>
+          <li class="ulEmpty compact toc" id="section-toc.1-1.11">
+            <p id="section-toc.1-1.11.1"><a href="#section-appendix.b" class="xref"></a><a href="#name-authors-address" class="xref">Author's Address</a></p>
+</li>
+        </ul>
+</nav>
+</section>
+</div>
+<div id="_terminology">
+<section id="section-1">
+      <h2 id="name-terminology">
+<a href="#section-1" class="section-number selfRef">1. </a><a href="#name-terminology" class="section-name selfRef">Terminology</a>
+      </h2>
+<div id="_6343f0bc-85eb-496f-b5a1-9d2f6dc39cfd">
+<p id="section-1-1">The key words "<span class="bcp14">MUST</span>", "<span class="bcp14">MUST NOT</span>", "<span class="bcp14">REQUIRED</span>", "<span class="bcp14">SHALL</span>",
+"<span class="bcp14">SHALL NOT</span>", "<span class="bcp14">SHOULD</span>", "<span class="bcp14">SHOULD NOT</span>", "<span class="bcp14">RECOMMENDED</span>",
+"<strong>NOT RECOMMENDED</strong>", "<span class="bcp14">MAY</span>", and "<span class="bcp14">OPTIONAL</span>" in this document
+are to be interpreted as described in BCP 14 <span>[<a href="#RFC2119" class="xref">RFC2119</a>]</span> <span>[<a href="#RFC8174" class="xref">RFC8174</a>]</span>
+when, and only when, they appear in all capitals, as shown here.<a href="#section-1-1" class="pilcrow">¶</a></p>
+</div>
+</section>
+</div>
+<div id="_introduction">
+<section id="section-2">
+      <h2 id="name-introduction">
+<a href="#section-2" class="section-number selfRef">2. </a><a href="#name-introduction" class="section-name selfRef">Introduction</a>
+      </h2>
+<div id="_399503c0-69c8-4591-befb-23dccf9efe4e">
+<p id="section-2-1"><span>[<a href="#RFC8140" class="xref">RFC8140</a>]</span> refers to the intended move of RFC formatting to
+XML2RFC v3 <span>[<a href="#RFC7990" class="xref">RFC7990</a>]</span>, in the following terms:<a href="#section-2-1" class="pilcrow">¶</a></p>
+</div>
+<blockquote id="section-2-2">
+        <div id="_56ef7833-46db-4815-8862-c28a43e029af">
+<p id="section-2-2.1">Although the RFC Editor has recently dragged the IETF kicking and
+screaming into the twentieth century [RFC7990] [RFC7996], there is a
+yearning among all right-thinking Internet architects to "keep it
+simple" and to return to the olden days when pigs could be given
+thrust without anyone taking undue offence.<a href="#section-2-2.1" class="pilcrow">¶</a></p>
+</div>
+<cite>— A. Farrel</cite>
+</blockquote>
+<div id="_c6a863b5-60bd-4b0a-86c2-210b4a92ea0b">
+<p id="section-2-3">While no pigs, flying or otherwise, are involved in the transition
+to RFC XML v3, it is opportune to enhance the <span>[<a href="#RFC8140" class="xref">RFC8140</a>]</span>
+legendarium in the service of RFC XML v3, by illustrating its
+functionality through references to the mythology of Camelot, and
+particularly the incidents at the Cave of Caerbannog.<a href="#section-2-3" class="pilcrow">¶</a></p>
+</div>
+<div id="_9673478c-7d34-4312-843c-52ebd6155510">
+<p id="section-2-4">The screaming move into the twenty-<strong>first</strong> century is accompanied by
+a move back to the late twentieth century, with ASCII stylings more
+wonted in haunts like ftp://ftp.wwa.com/pub/Scarecrow (known to be
+accessible in 1996.)<a href="#section-2-4" class="pilcrow">¶</a></p>
+</div>
+<div id="_dc1362bd-49e9-4303-9a8f-0ee0b7767af3">
+<p id="section-2-5">There are two references to rabbits in
+<em>Monty Python and the Holy Grail</em> which are expounded on herewith:<a href="#section-2-5" class="pilcrow">¶</a></p>
+</div>
+<span class="break"></span><div id="_0359a67e-aa4e-4f3c-a8d6-9178220372d4">
+<dl class="dlParallel" id="section-2-6">
+        <dt id="section-2-6.1">Trojan Rabbit</dt>
+        <dd style="margin-left: 1.5em" id="section-2-6.2">
+          <div id="_9146968d-0091-49f1-a614-246728b8293c">
+<p id="section-2-6.2.1">In their siege of the French-occupied castle which may already
+contain an instance of the Grail, Sir Bedevere the Wise proposes to
+use a Trojan Rabbit to infiltrate the castle, with a raiding party
+to take the French "not only by surprise, but totally unarmed."<a href="#section-2-6.2.1" class="pilcrow">¶</a></p>
+</div>
+<div id="_4915dcec-7aa4-4eac-ae13-1342ff4f3ae0">
+<p id="section-2-6.2.2">The proposal, unsurprisingly, proved abortive. The more so as the
+raiding party forgot to hide within the Trojan Rabbit, before the
+French soldiers took the Trojan Rabbit inside the castle.<a href="#section-2-6.2.2" class="pilcrow">¶</a></p>
+</div>
+</dd>
+        <dd class="break"></dd>
+<dt id="section-2-6.3">Killer Rabbit of Caerbannog</dt>
+        <dd style="margin-left: 1.5em" id="section-2-6.4">
+          <div id="_b2410f1c-e604-49fc-b1d9-34e702f8343a">
+<p id="section-2-6.4.1">Guarding the entrance to the Cave of Caerbannog; see <a href="#caerbannog" class="xref">Section 4</a>.<a href="#section-2-6.4.1" class="pilcrow">¶</a></p>
+</div>
+</dd>
+      <dd class="break"></dd>
+</dl>
+</div>
+</section>
+</div>
+<div id="_the_french_occupied_castle">
+<section id="section-3">
+      <h2 id="name-the-french-occupied-castle">
+<a href="#section-3" class="section-number selfRef">3. </a><a href="#name-the-french-occupied-castle" class="section-name selfRef">The French-occupied castle</a>
+      </h2>
+<div id="_c966b474-0ace-4824-a9ce-efa15f6c9af4">
+<p id="section-3-1">The participants of that renowned exercise in cross-cultural
+communication, to wit the exchange between the
+<em>Knights of the Round Table</em>
+and the taunting French soldiers serving under <strong>Guy de Lombard</strong> are,
+properly speaking, outside the scope of this <code>menagerie</code>, being more
+or less human. Notwithstanding, several<sup>ish</sup> beasts both animate<sub>d</sub>
+and wooden played a significant part in this encounter; most
+notably:<a href="#section-3-1" class="pilcrow">¶</a></p>
+</div>
+<ul class="normal">
+<li class="normal" id="section-3-2.1">
+          <div id="_4afd153b-ef42-44d1-a98b-b1614029520d">
+<p id="section-3-2.1.1">The Projectile Cow, see <a href="#projectile-cow" class="xref">Figure 1</a><a href="#section-3-2.1.1" class="pilcrow">¶</a></p>
+</div>
+</li>
+        <li class="normal" id="section-3-2.2">
+          <div id="_e05aa5da-62c3-42cd-b6a5-1b01e9eefdb2">
+<p id="section-3-2.2.1">The Trojan Rabbit, see <a href="#trojan-rabbit" class="xref">Figure 2</a><a href="#section-3-2.2.1" class="pilcrow">¶</a></p>
+</div>
+</li>
+      </ul>
+<span id="name-the-projectile-cow-with-an-"></span><div id="projectile-cow">
+<figure id="figure-1">
+        <div id="_2b8006fe-a186-47cd-b219-ccb1088d7f9f">
+<div class="artwork art-text alignLeft art-ascii-art" id="section-3-3.1">
+<pre>.-.-.-.-.-.-.-.-.-.-.-.--.-.-.-.-.-.-.--.-.-.-.-.-.-.-.--.-.
+_-_---__--__--___-___-__-____---___-________---____-____-__-
+._.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.--..-.-.-.-.-.-..--.-
+,..,.,.,.,.,..,.,,..,.,.,.,.,.,,  ^^  .,,.,.,  ^^   .,.,.,.=
+_&gt;-.-.-.-._&gt;_&gt;_&gt;_.-.-.-.-.-.-.-.  \\\  .,.,.  ///  .-.-.-.-.
+.,.,.,.,..,.,..,.,.,..,.,.,,..,.,  \ \_______/ /    .,.,.,.,
+.,.,.,.,..,.,.,.,..,,..,,.,.,.,.,.  &lt;[ {o} . ]&gt;  #   .,.,.,.
+.-.-.--.-.-.-.-.-.--.-.-.-.--.-.-.   [ ______]       .-.-.-.
+.-.--.-.-.-.--.-.-.-.--.-.-.,.,.,  / [ !  ` `]   .,.,..,.,.-
+.,.,.,.-.-,l,-,l.-,.,.,.,-.,*.    /  {_!MOO!_}    . ., . . ,
+.-.-.-.-.-.-.-.-.-.-.-.-.-.-    /M      /    -.-&lt;&gt;.,.,..-.-,
+.-.-.--.-.-.-.-.-.-.-.-.--..   /MI    LK\____    .-.-.-.-.-.
+.-.-.-.--.-.-.-.-.-.-.-.-.-   /MILK   mil_____k   ,.,.,..-,-
+.-,-.-,-.,-.-,-.`-.-/-..     //    -`  //       .-.p . .-.-.
+.-.--.-.-.-.-.-.-.-.        //   .,   //    .-.-.-.-.-.-.-.-
+.-.-.--.-.-.-.-.-.-.  %____============    .-.-.--.-.-.-.-.-
+-.-.-.-.--.-.-.-.-.-.      !  !           .,-.-.-,-,--,-.-,-
+,--.-.-,--.--.-.,--,        \ \      .-,-,--.-,--,-.---,-.-,
+,-.-.-,-,-.-,-,-.--,         +  &gt;    .-,--,-.--,-,-.-.-,--,-
+,--.-,--,-,--.---,-               .-,-,--.--,--,-.---,-,-.-.
+.,.,.,.,..,.,.,.{A\      .,.,.,.,..,.,.,.,.,.,..,.,.,.,..,.,
+.,.,.,.,.,.,.{GLASS\   .,..,.,.,.,.,..,.,.,.,.,.,.,..,.,.,.,
+,..,.,,.,,.,{OF|MILK\..,.,.,.,.,..,.,.,.,.,.,..,.,.,.,.,.,.,
+,.,..,.,,.,{ISWORTH},.,.,..,.,.,.,.,..,..,.,.,..,.,.,.,.,.,.
+.,.,.,.,.{EVERYTNG}.-.-.--..-.-.-.-.--..--.-.-.-.-.--.-.-.-.
+-.-.-.-{FORINFANTS}___--___-_-__-___--*(0~`~.,.,.,.,&gt;&lt;&gt;&lt;.&gt;&lt;&gt;
+_-__-_{BUTBETTER}-.-,-,-,-,-,-,-,-,.-^^^^.-.-.-.-.^^^7&gt;&gt;&gt;,..
+.._...{WITH_HONEY}-.-.-.-.-.-.-.-.-.-.RANDOM(BUSH)SHRUBS&gt;_..
+GRASS_GRASS_GRASS_GRASS_GRASS_SOMEROCKS&gt;GRASS&gt;GRASS&lt;GRASS&gt;PC
+SOIL_ROOTS_SOIL_SOIL_ROCKS_SOIL_GRASS_GRASS_GRASS_ROCKS_SOIL
+CLAY_ROCKS_PEBBLES_CLAY_CLAY_CLAY_CLAY_GOLD_CLAY_CLAY&gt;&lt;_WORM
+ROOTS_CLAY_SKELETON_MORESOIL_CLAY_CLAY_CLAY_CLAY_&lt;MUSHROOMS&gt;</pre>
+</div>
+</div>
+<figcaption><a href="#figure-1" class="selfRef">Figure 1</a>:
+<a href="#name-the-projectile-cow-with-an-" class="selfRef">The Projectile Cow with an accompanying cannon</a>
+        </figcaption></figure>
+</div>
+<span id="name-the-trojan-rabbit-with-an-a"></span><div id="trojan-rabbit">
+<figure id="figure-2">
+        <div id="_e1ca35bb-3fac-46c6-8f87-81ddc23f1d89">
+<div class="artwork art-text alignLeft art-ascii-art" id="section-3-4.1">
+<pre>                           ___  ____
+                          //_ \//\__\
+                            || ||  |
+                         -__||_||__|
+                       //         \--_
+                      //     ____     --___
+                     //     //   \         \-_
+                    //      \\  @/        o ||
+                   //        ----      _____||
+                  //                   //
+             //\_//__                 //
+           //--  --- \____           //
+          //          --- \______   //
+         //   , .          ----- \_//_
+        //       ,.               --- \____
+       //              .,v             --- \___
+      //                                 __ -- \_
+     ||  ,         _______________       //||     |-_
+     ||           |   |''''''''''|     // ||     |  |
+     ||     '     |   |          |        ||     |  |
+     ||           |   |          |        ||     |  |
+     ||      "    |   | 0        |     ___||___  |  |
+     ||           |   |          |     --------  |  |
+     ||___        |   |          |        ______ |  |-
+    //     \      |   |          |       //     \| _| \
+   //       \ ____|---|__________|______//       \/    |
+  ||    X    |      /                  ||    X    |   /
+   \\       /\\____/                    \\       /___/
+    \\_____/ -----                       \\_____/---
+     -----                                -----</pre>
+</div>
+</div>
+<figcaption><a href="#figure-2" class="selfRef">Figure 2</a>:
+<a href="#name-the-trojan-rabbit-with-an-a" class="selfRef">The Trojan Rabbit with an automatic sliding door</a>
+        </figcaption></figure>
+</div>
+<div id="_5e463965-004d-4d37-b0fa-c02e941ceb71">
+<aside id="section-3-5">
+        <p id="section-3-5.1">NOTE: Image courtesy of
+<span><a href="https://camelot.gov.example/creatures-in-ascii/">https://camelot.gov.example/creatures-in-ascii/</a></span><a href="#section-3-5.1" class="pilcrow">¶</a></p>
+</aside>
+</div>
+<div id="_384575e2-72fd-4ced-b8bf-5390dc5e9d62">
+<p id="section-3-6">The exchange of projectile animals was the beginning of a
+long-running fruitful relationship between the British and the
+French peoples, which
+arguably predates the traditional English enmity with the
+French.<a href="#section-3-6" class="pilcrow">¶</a></p>
+</div>
+</section>
+</div>
+<div id="caerbannog">
+<section id="section-4">
+      <h2 id="name-the-mythos-of-caerbannog">
+<a href="#section-4" class="section-number selfRef">4. </a><a href="#name-the-mythos-of-caerbannog" class="section-name selfRef">The Mythos of Caerbannog</a>
+      </h2>
+<div id="_b08642d4-2edf-470b-8e46-42107c4e3983">
+<p id="section-4-1">The <em>Cave of Caerbannog</em> has been well-established in the mythology
+of Camelot (as recounted by Monty Python) as the lair of the
+Legendary Black Beast of Arrrghhh, more commonly known today as the
+<strong>Killer Rabbit of Caerbannog</strong> <a href="#killer_rabbit_caerbannog" class="xref">Section 4.1</a>.
+It is the encounter between the Killer Rabbit of Caerbannog and the
+Knights of the Round Table, armed with the Holy Hand Grenade of
+Antioch (see the <span><a href="#holy_hand_grenade" class="xref">following section</a> (<a href="#holy_hand_grenade" class="xref">Section 4.2</a>)</span>), that we
+recount here through monospace font and multiple spaces.<a href="#section-4-1" class="pilcrow">¶</a></p>
+</div>
+<div id="killer_rabbit_caerbannog">
+<section id="section-4.1">
+        <h3 id="name-the-killer-rabbit-of-caerba">
+<a href="#section-4.1" class="section-number selfRef">4.1. </a><a href="#name-the-killer-rabbit-of-caerba" class="section-name selfRef">The Killer Rabbit of Caerbannog</a>
+        </h3>
+<div id="_a9d7d420-75b4-403e-888a-a5976de0fb9a">
+<p id="section-4.1-1">The <strong>Killer Rabbit of Caerbannog</strong>, that most formidable foe of
+the Knights and of all that is holy or carrot-like, has been
+depicted diversely in lay and in song. We venture to say,
+<em>contra</em> the claim made in <span><a href="https://www.rfc-editor.org/info/section" class="relref">Section 4.1</a> of [<a href="#RFC8140" class="xref">RFC8140</a>]</span>,
+that the Killer Rabbit of Caerbannog truly is the most afeared
+of all the creatures. Short of sanctified ordnance such as
+<a href="#holy_hand_grenade" class="xref">Holy Hand Grenade of Antioch</a>, there are few remedies
+known against its awful lapine powers.<a href="#section-4.1-1" class="pilcrow">¶</a></p>
+</div>
+<div id="_f97b2f29-4090-4dfc-8cf4-47dc16ea5721">
+<p id="section-4.1-2"><span><a href="#killer-bunny" class="xref">The following depiction</a> (<a href="#killer-bunny" class="xref">Figure 3</a>)</span> of the fearsome beast
+has been sourced from
+<a href="http://camelot.gov.example/avatars/rabbit">Rabbit-SCII</a>,
+<span><a href="#killer-source" class="xref">accompanied</a> (<a href="#killer-source" class="xref">Section 4.1</a>)</span>
+by C code that was used in this accurate depiction of the
+Killer Rabbit:<a href="#section-4.1-2" class="pilcrow">¶</a></p>
+</div>
+<span id="name-a-photo-of-the-killer-rabbi"></span><div id="killer-bunny">
+<figure id="figure-3">
+          <div id="_a2269507-e7cb-4220-96ef-7f4023f28b34">
+<div class="artwork art-text alignLeft art-ascii-art" id="section-4.1-3.1">
+<pre>\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+\\\\\\\\\\\\\\\\\\\\\^^^^^^^^^^^^^^^^^^^^^^\\\\\\\\\\\\\\\\\
+\\\\\\\\\\\\\\\\\\\&lt;&lt;#MWSHARPMWMWMWTEETHWMWWM&gt;&gt;&gt;\\\\\\\\\\\\
+\\\\\\\\\\\\\\\&lt;&lt;&lt;#WMMWMWDEEPMDARKWCAVEMWWMMWM##&gt;&gt;&gt;&gt;\\\\\\\\
+\\\\\\\\\\\\\&lt;&lt;#WMWMWMWMWWM/^MWMWMWMWMWMW^WMWMWMMW#&gt;&gt;&gt;\\\\\\
+\\\\\\\\\\\\&lt;&lt;#WMWMBEASTMW// \MWABBITWMW/ \MWMWMWMW##\\\\\\\
+\\\\\\\\\\##MWMWMMWMWMWMWM\\  \MWMWMWMW/  /MWMWMWMWM##\\\\\\
+\\\\\\\\##WMWMWMWMMWMWMWMWM\\  \MWMWMW/  /MWMWMWMMWMWMWM##\\
+\\\\\\\##MWMMRAVENOUSMWMWMWM\\  \====/  /MWMRABBITMWMWMWMW##
+\\\\\\##MWMWMWMWMMWMWMWMWMW[[            ]WMWMWMMWMWMWMWMWMW
+\\\\\##MWMWMWMWCARNIVOROUSW[[   3    3   ]MWMWTOOMDARKWMWMMW
+\\\\##MWMWDARKMWMWMWMWMWMWM//\     o    /MWMWMWMMWMWMWMMWMWM
+\\##MWMWMMKILLERABBITWMWMM//| \___vv___/ \WMPITCHWBLACKWMWMW
+\##MWMWMWMMWMWMWMWMWMMWMW// |   \-^^-/   |MWMWMWMMWMWMWMWMWM
+MWMWMWMMWMWVERYMDARKWMMW//  |            |MWMCAERBANNOGWMWMW
+MWMWMWMMWMWMWMWMWMWMWMM{{  /             /MWMWMMWMWMWMWMWMWM
+MULTRADARKWMWMHELPMWMWMW\\ \  |      |  |MWMCANMMWMWMWMMWMWW
+MWMWMWMWMMWMWMWMWMMWMWMWM\\ | |_     |  |_WMWMMYOUMWMMWWMWMW
+MWMMWMWMWMWMBLACKWMWMWMWWM\_|__-\-----\__-\MWMWMWMREADMWMWWM
+MWMWMWMMWMWMWMWMMWMWMWWMWMWMWMMWMWMWMWMWMWMWMWMWMWMWMMTHISWW
+MWVERYMMSCARYMWMWWMWMMWMWMWMWMWMWMWMWMWMWMWMWWMWMMWMWIWM'.',
+MWMWMMWMW======MWMMCANTWSEEMAMTHINGMMWMWMWMWMWMWMBETMMW` . `
+MWMWMWM// SKULL \MWMWMWMMWSCREAMMMWMWMWMMWMNOTMWMWMWW  ` . \
+MWMWMW|| |X||X| |MWMWCALLMMEWMMWMWMMWMWMWMWWM - ` ~ . , '
+MWMWMW||___ O __|MWMWMWMMWMWMWMWMMW'   ___________//   -_^_-
+MWMWMW \\||_|_||MWMW      '   . .     &lt;_|_|_||_|__|     \O/
+MW   \\/\||v v||  -\\-------___     .   .,         \     |
+    \\|  \_CHIN/  ==-(|CARROT/)\&gt;     \\/||//         v\/||/
+       )          /--------^-^            ,.            \|//
+ #  \(/ .\\|x//                              " ' '
+  . ,                \\||//        \||\\\//   \\</pre>
+</div>
+</div>
+<figcaption><a href="#figure-3" class="selfRef">Figure 3</a>:
+<a href="#name-a-photo-of-the-killer-rabbi" class="selfRef">A Photo Of The Killer Rabbit of Caerbannog Taken In Secret</a>
+          </figcaption></figure>
+</div>
+<div id="killer-source">
+<div id="section-4.1-4">
+<pre class="sourcecode lang-c">&lt;CODE BEGINS&gt;/* Locate the Killer Rabbit */
+int type;
+unsigned char *killerRabbit =
+  LocateCreature(&amp;caerbannog, "killer rabbit");
+if( killerRabbit == 0 ){
+  puts("The Killer Rabbit of Caerbannog is out of town.");
+  return LOST_CREATURE;
+}
+
+/* Load Cave */
+unsigned char *cave = LoadPlace(&amp;caerbannog,
+  "The Cave Of Caerbannog");
+if( cave == 0 ){
+  puts("The Cave of Caerbannog must have moved.");
+  return LOST_PLACE;
+}
+
+/* Lure the Killer Rabbit back into the Cave */
+unsigned char *carrot = allocateObjectInPlace(
+  carrot("fresh"), cave);
+if( carrot == 0 ){
+  puts("No carrot, no rabbit.");
+  return LOST_LURE;
+}
+
+/* Finally, notify the Killer Rabbit to act */
+return notifyCreature(killerRabbit, &amp;carrot);
+&lt;CODE ENDS&gt;</pre><a href="#section-4.1-4" class="pilcrow">¶</a>
+</div>
+</div>
+<div id="_f41f7630-c18e-4f59-8230-00dfc3449b8e">
+<p id="section-4.1-5">On the beast's encounter with the Knights of the Round Table,
+the following personnel engaged with it in combat:<a href="#section-4.1-5" class="pilcrow">¶</a></p>
+</div>
+<ul class="normal">
+<li class="normal" id="section-4.1-6.1">
+            <div id="_3838cf09-ad1c-412c-bd20-dd7834dedee6">
+<p id="section-4.1-6.1.1">Killed<a href="#section-4.1-6.1.1" class="pilcrow">¶</a></p>
+</div>
+<ul class="normal">
+<li class="normal" id="section-4.1-6.1.2.1">
+                <div id="_9e72ca86-6465-4071-9191-8dc56d00a066">
+<p id="section-4.1-6.1.2.1.1">Sir Bors<a href="#section-4.1-6.1.2.1.1" class="pilcrow">¶</a></p>
+</div>
+</li>
+              <li class="normal" id="section-4.1-6.1.2.2">
+                <div id="_341730b5-1eb2-41ab-8a08-f215fa471cb9">
+<p id="section-4.1-6.1.2.2.1">Sir Gawain<a href="#section-4.1-6.1.2.2.1" class="pilcrow">¶</a></p>
+</div>
+</li>
+              <li class="normal" id="section-4.1-6.1.2.3">
+                <div id="_f1d695b2-0714-4f8e-b346-2c46a66aa993">
+<p id="section-4.1-6.1.2.3.1">Sir Ector<a href="#section-4.1-6.1.2.3.1" class="pilcrow">¶</a></p>
+</div>
+</li>
+            </ul>
+</li>
+          <li class="normal" id="section-4.1-6.2">
+            <div id="_347920cb-b2f1-4573-a649-0d785942e19a">
+<p id="section-4.1-6.2.1">Soiled Himself<a href="#section-4.1-6.2.1" class="pilcrow">¶</a></p>
+</div>
+<ul class="normal">
+<li class="normal" id="section-4.1-6.2.2.1">
+                <div id="_6a93a255-f102-4e5a-9c61-03a32633d6e4">
+<p id="section-4.1-6.2.2.1.1">Sir Robin<a href="#section-4.1-6.2.2.1.1" class="pilcrow">¶</a></p>
+</div>
+</li>
+            </ul>
+</li>
+          <li class="normal" id="section-4.1-6.3">
+            <div id="_e1b6cd5b-27f3-42b2-9aca-4cfefa4242b0">
+<p id="section-4.1-6.3.1">Panicked<a href="#section-4.1-6.3.1" class="pilcrow">¶</a></p>
+</div>
+<ul class="normal">
+<li class="normal" id="section-4.1-6.3.2.1">
+                <div id="_8901ea4d-f2d7-4872-990e-c2fa4f5d8f3c">
+<p id="section-4.1-6.3.2.1.1">King Arthur<a href="#section-4.1-6.3.2.1.1" class="pilcrow">¶</a></p>
+</div>
+</li>
+            </ul>
+</li>
+          <li class="normal" id="section-4.1-6.4">
+            <div id="_b01416c7-35f4-4d19-be9c-1e242f22cd14">
+<p id="section-4.1-6.4.1">Employed Ordnance<a href="#section-4.1-6.4.1" class="pilcrow">¶</a></p>
+</div>
+<ul class="normal">
+<li class="normal" id="section-4.1-6.4.2.1">
+                <div id="_d1721511-3b0b-427d-a223-9a70d42dc8ad">
+<p id="section-4.1-6.4.2.1.1">The Lector<a href="#section-4.1-6.4.2.1.1" class="pilcrow">¶</a></p>
+</div>
+</li>
+              <li class="normal" id="section-4.1-6.4.2.2">
+                <div id="_c2093faa-5994-4f94-803d-5df21ef750de">
+<p id="section-4.1-6.4.2.2.1">Brother Maynard<a href="#section-4.1-6.4.2.2.1" class="pilcrow">¶</a></p>
+</div>
+</li>
+            </ul>
+</li>
+          <li class="normal" id="section-4.1-6.5">
+            <div id="_2bed84b3-3b98-44cd-b862-d64913117d00">
+<p id="section-4.1-6.5.1">Scoffed<a href="#section-4.1-6.5.1" class="pilcrow">¶</a></p>
+</div>
+<ul class="normal">
+<li class="normal" id="section-4.1-6.5.2.1">
+                <div id="_4ca3e8a6-0a03-43c3-b184-a5fec75fe1e7">
+<p id="section-4.1-6.5.2.1.1">Tim the Enchanter<a href="#section-4.1-6.5.2.1.1" class="pilcrow">¶</a></p>
+</div>
+</li>
+            </ul>
+</li>
+        </ul>
+</section>
+</div>
+<div id="holy_hand_grenade">
+<section id="section-4.2">
+        <h3 id="name-holy-hand-grenade-of-antioc">
+<a href="#section-4.2" class="section-number selfRef">4.2. </a><a href="#name-holy-hand-grenade-of-antioc" class="section-name selfRef">Holy Hand Grenade of Antioch</a>
+        </h3>
+<span id="name-the-holy-hand-grenade-of-an"></span><div id="hand-grenade-figure">
+<figure id="figure-4">
+          <div id="_3c86c71a-20f1-4a20-ab32-a33b749b7abc">
+<div class="artwork art-text alignLeft art-ascii-art" id="section-4.2-1.1">
+<pre>                        ______
+                       \\/  \/
+                      __\\  /__
+                     ||  //\   |
+                     ||__\\/ __|
+                        ||  |    ,---,
+                        ||  |====`\  |
+                        ||  |    '---'
+                      ,--'*`--,
+                    _||#|***|#|
+                 _,/.-'#|* *|#`-._
+               ,,-'#####|   |#####`-.
+             ,,'########|   |########`,
+            //##########| o |##########\
+           ||###########|   |###########|
+          ||############| o |############|
+          ||------------'   '------------|
+          ||o  o  o  o  o   o  o  o  o  o|
+           |-----------------------------|
+           ||###########################|
+            \\#########################/
+             `..#####################,'
+               ``..###############_,'
+                  ``--.._____..--'
+                     `''-----''`</pre>
+</div>
+</div>
+<figcaption><a href="#figure-4" class="selfRef">Figure 4</a>:
+<a href="#name-the-holy-hand-grenade-of-an" class="selfRef">The Holy Hand Grenade of Antioch (don't pull the pin)</a>
+          </figcaption></figure>
+</div>
+<span id="name-the-sovereigns-orb-made-inv"></span><div id="sovereign-orb">
+<figure id="figure-5">
+          <div id="_3142da37-e0ad-4ba7-b5de-2a42efed5cbe">
+<div class="artwork art-text alignRight art-ascii-art" id="section-4.2-2.1">
+<pre>SEE https://upload.wikimedia.org/wikipedia/commons/b/bf/Coa_Illustration_Elements_Globus_cruciger.svg</pre>
+</div>
+</div>
+<figcaption><a href="#figure-5" class="selfRef">Figure 5</a>:
+<a href="#name-the-sovereigns-orb-made-inv" class="selfRef">The Sovereign's Orb made invisible</a>
+          </figcaption></figure>
+</div>
+<div id="_2de14a12-34e0-43cf-84ea-d5ef147ee03a">
+<p id="section-4.2-3">The solution to the impasse at the Cave of Caerbannog<span id="iref-cave-of-caerbannog-1" class="iref"></span> was
+provided by the successful deployment of the
+<strong>Holy Hand Grenade of Antioch</strong> (see <a href="#hand-grenade-figure" class="xref">Figure 4</a>)
+<span id="iref-holy-hand-grenade-of-antioc" class="iref"></span>.
+Any similarity between the Holy Hand Grenade of Antioch and the
+mythical <em>Holy Spear of Antioch</em> is purely intentional;
+<span id="iref-relics-christian-3" class="iref"></span> any similarity between the Holy Hand Grenade
+of Antioch and the <em>Sovereign's Orb of the United Kingdom</em>
+(see <a href="#sovereign-orb" class="xref">Figure 5</a>) is putatively fortuitous.
+<span id="iref-relics-monarchic-4" class="iref"></span><a href="#section-4.2-3" class="pilcrow">¶</a></p>
+</div>
+<span class="break"></span><div id="_122bfe36-1665-4568-9394-75af72ed2c09">
+<dl class="dlParallel" id="section-4.2-4">
+          <dt id="section-4.2-4.1">Holy Hand Grenade of Antioch</dt>
+          <dd style="margin-left: 1.5em" id="section-4.2-4.2">
+            <div id="_fcd3d348-c206-43af-9b43-8e35766e8a60">
+<p id="section-4.2-4.2.1">Ordnance deployed by Brother Maynard under the incantation of a
+lector, in order to dispense with the Foes of the Virtuous.
+See <a href="#hand-grenade-figure" class="xref">Figure 4</a>.<a href="#section-4.2-4.2.1" class="pilcrow">¶</a></p>
+</div>
+</dd>
+          <dd class="break"></dd>
+<dt id="section-4.2-4.3">Holy Spear of Antioch</dt>
+          <dd style="margin-left: 1.5em" id="section-4.2-4.4">
+            <div id="_af65abdc-481d-41b5-bcd3-56a7257a0a86">
+<p id="section-4.2-4.4.1">A supposed relic of the crucifixion of Jesus Christ, this is one
+of at least four claimed instances of the lance that pierced
+Christ's side. Its historical significance lies in inspiring
+crusaders to continue their siege of Antioch in 1098.<a href="#section-4.2-4.4.1" class="pilcrow">¶</a></p>
+</div>
+</dd>
+          <dd class="break"></dd>
+<dt id="section-4.2-4.5">Sovereign's Orb of the United Kingdom</dt>
+          <dd style="margin-left: 1.5em" id="section-4.2-4.6">
+            <div id="_92c804d5-2b50-4e11-a1dc-9eb621138c2d">
+<p id="section-4.2-4.6.1">Part of the Crown Jewels of the United Kingdom, the Sovereign's
+Orb is a hollow gold sphere set with jewels and topped with a
+cross.  It was made for Charles II in 1661. See <a href="#sovereign-orb" class="xref">Figure 5</a>.<a href="#section-4.2-4.6.1" class="pilcrow">¶</a></p>
+</div>
+</dd>
+        <dd class="break"></dd>
+</dl>
+</div>
+<div id="_7e2eeeff-86d8-40c5-b751-143ae79ca450">
+<p id="section-4.2-5">The instructions in the <em>Book of Armaments</em> on the proper deployment
+of the Holy Hand Grenade of Antioch <span class="bcp14">MAY</span> be summarized as
+follows, although this summary <span class="bcp14">SHALL NOT</span> be used as a substitute
+for a reading from the Book of Armaments:<a href="#section-4.2-5" class="pilcrow">¶</a></p>
+</div>
+<div id="_713fbae9-af73-464e-abe6-a439a92e3bc6">
+<ol start="1" type="1" class="normal type-1" id="section-4.2-6">
+<li id="section-4.2-6.1">
+            <div id="_fa1aafc2-9d9e-4fd0-a75e-d16d0c96df69">
+<p id="section-4.2-6.1.1">Preamble: St Attila Benediction<a href="#section-4.2-6.1.1" class="pilcrow">¶</a></p>
+</div>
+</li>
+          <li id="section-4.2-6.2">
+            <div id="_06e2bfef-f3ef-41b4-989f-2b5e725393a8">
+<p id="section-4.2-6.2.1">Feast of the People on Sundry Foods<a href="#section-4.2-6.2.1" class="pilcrow">¶</a></p>
+</div>
+<ul class="normal">
+<li class="normal" id="section-4.2-6.2.2.1">
+                <div id="_308dba4a-8af9-4262-859d-f1f78985eacf">
+<p id="section-4.2-6.2.2.1.1">Lambs<a href="#section-4.2-6.2.2.1.1" class="pilcrow">¶</a></p>
+</div>
+</li>
+              <li class="normal" id="section-4.2-6.2.2.2">
+                <div id="_11a23183-a212-42a3-9319-20cd50cd0f9c">
+<p id="section-4.2-6.2.2.2.1">Sloths<a href="#section-4.2-6.2.2.2.1" class="pilcrow">¶</a></p>
+</div>
+</li>
+              <li class="normal" id="section-4.2-6.2.2.3">
+                <div id="_9028de31-ecc6-4440-8faa-850edcc84aea">
+<p id="section-4.2-6.2.2.3.1">Carp<a href="#section-4.2-6.2.2.3.1" class="pilcrow">¶</a></p>
+</div>
+</li>
+              <li class="normal" id="section-4.2-6.2.2.4">
+                <div id="_5c0d73a3-0d24-4d34-8246-e3269fa81ff0">
+<p id="section-4.2-6.2.2.4.1">Anchovies<a href="#section-4.2-6.2.2.4.1" class="pilcrow">¶</a></p>
+</div>
+</li>
+              <li class="normal" id="section-4.2-6.2.2.5">
+                <div id="_dabec610-deb4-4b3b-ba7e-01f728f0f7d4">
+<p id="section-4.2-6.2.2.5.1">Orangutangs<a href="#section-4.2-6.2.2.5.1" class="pilcrow">¶</a></p>
+</div>
+</li>
+              <li class="normal" id="section-4.2-6.2.2.6">
+                <div id="_2c45ed12-e390-4969-ba40-b4c31003252d">
+<p id="section-4.2-6.2.2.6.1">Breakfast Cereals<a href="#section-4.2-6.2.2.6.1" class="pilcrow">¶</a></p>
+</div>
+</li>
+              <li class="normal" id="section-4.2-6.2.2.7">
+                <div id="_4068a3dc-134e-4e28-838e-9afc138dfb75">
+<p id="section-4.2-6.2.2.7.1">Fruit Bats<a href="#section-4.2-6.2.2.7.1" class="pilcrow">¶</a></p>
+</div>
+</li>
+              <li class="normal" id="section-4.2-6.2.2.8">
+                <div id="_b0cdc15d-d2ea-488a-97dc-4127b19ff4a9">
+<p id="section-4.2-6.2.2.8.1">
+<em>et hoc genus omne</em><a href="#section-4.2-6.2.2.8.1" class="pilcrow">¶</a></p>
+</div>
+</li>
+            </ul>
+</li>
+          <li id="section-4.2-6.3">
+            <div id="_22039f2a-51c8-444d-8923-68d5cda386af">
+<p id="section-4.2-6.3.1">Take out the Holy Pin<a href="#section-4.2-6.3.1" class="pilcrow">¶</a></p>
+</div>
+</li>
+          <li id="section-4.2-6.4">
+            <div id="_25a3b9c5-4511-4a87-88e2-5f1ad2df6392">
+<p id="section-4.2-6.4.1">The Count<a href="#section-4.2-6.4.1" class="pilcrow">¶</a></p>
+</div>
+<div id="_99bacee9-c49b-42b6-a9ce-901b934b2441">
+<ol start="1" type="A" class="normal type-A" id="section-4.2-6.4.2">
+<li id="section-4.2-6.4.2.1">
+                <div id="_90ba3cd1-3e11-4663-a29b-4d4573c54f5c">
+<p id="section-4.2-6.4.2.1.1">Count is to Three: no more, no less<a href="#section-4.2-6.4.2.1.1" class="pilcrow">¶</a></p>
+</div>
+</li>
+              <li id="section-4.2-6.4.2.2">
+                <div id="_8b8cfb59-26de-40e1-8f61-ef70e690b826">
+<p id="section-4.2-6.4.2.2.1">Not Four<a href="#section-4.2-6.4.2.2.1" class="pilcrow">¶</a></p>
+</div>
+</li>
+              <li id="section-4.2-6.4.2.3">
+                <div id="_c428c444-97ef-491a-a234-d46563189189">
+<p id="section-4.2-6.4.2.3.1">Nor Two, except if the count then proceeds to Three<a href="#section-4.2-6.4.2.3.1" class="pilcrow">¶</a></p>
+</div>
+</li>
+              <li id="section-4.2-6.4.2.4">
+                <div id="_89da7b52-30aa-4aaf-bc2d-9112e854c551">
+<p id="section-4.2-6.4.2.4.1">Five is Right Out<a href="#section-4.2-6.4.2.4.1" class="pilcrow">¶</a></p>
+</div>
+</li>
+            </ol>
+</div>
+</li>
+          <li id="section-4.2-6.5">
+            <div id="_2cdec743-c3f9-49c5-8cb5-30d7aaee6078">
+<p id="section-4.2-6.5.1">Lob the Holy Hand Grenade of Antioch towards the Foe<a href="#section-4.2-6.5.1" class="pilcrow">¶</a></p>
+</div>
+</li>
+          <li id="section-4.2-6.6">
+            <div id="_53a59fa0-b533-4fd0-a26b-b522e6d187a2">
+<p id="section-4.2-6.6.1">The Foe, being naughty in the <strong>LORD's</strong> sight, <span class="bcp14">SHALL</span> snuff it<a href="#section-4.2-6.6.1" class="pilcrow">¶</a></p>
+</div>
+</li>
+        </ol>
+</div>
+<div id="_d5635f19-e98c-40af-968d-f70779ba3882">
+<p id="section-4.2-7">This could also be represented in pseudocode as follows:<a href="#section-4.2-7" class="pilcrow">¶</a></p>
+</div>
+<div id="_e0aa0add-15dc-49b8-b998-916c58e7c894">
+<ol start="1" type="1" class="normal type-1" id="section-4.2-8">
+<li id="section-4.2-8.1">
+            <div id="_d7137e7b-116a-4bf7-abcb-ccd0b5d47f7e">
+<p id="section-4.2-8.1.1">Take out the Holy Pin<a href="#section-4.2-8.1.1" class="pilcrow">¶</a></p>
+</div>
+</li>
+          <li id="section-4.2-8.2">
+            <div id="_f3f162d6-b2e7-4ed1-8bb8-b8c2ff73c520">
+<p id="section-4.2-8.2.1">The Count<a href="#section-4.2-8.2.1" class="pilcrow">¶</a></p>
+</div>
+<div id="_f44e87b0-1997-4425-ac79-ba2fbea8476c">
+<div id="section-4.2-8.2.2">
+<pre class="sourcecode">integer count;
+for count := 1 step 1 until 3 do
+  say(count)
+comment Five is Right Out</pre><a href="#section-4.2-8.2.2" class="pilcrow">¶</a>
+</div>
+</div>
+</li>
+          <li id="section-4.2-8.3">
+            <div id="_c15cf626-2e0c-40c7-96c1-3e2c00030717">
+<p id="section-4.2-8.3.1">Lob the Holy Hand Grenade of Antioch towards the Foe<a href="#section-4.2-8.3.1" class="pilcrow">¶</a></p>
+</div>
+</li>
+          <li id="section-4.2-8.4">
+            <div id="_c702f4ea-a469-4277-a43b-bb6db7eab099">
+<p id="section-4.2-8.4.1">Foe snuffs it<a href="#section-4.2-8.4.1" class="pilcrow">¶</a></p>
+</div>
+</li>
+        </ol>
+</div>
+</section>
+</div>
+</section>
+</div>
+<div id="_dramatis_personae">
+<section id="section-5">
+      <h2 id="name-dramatis-personae">
+<a href="#section-5" class="section-number selfRef">5. </a><a href="#name-dramatis-personae" class="section-name selfRef">Dramatis Personae</a>
+      </h2>
+<div id="_844b99e1-70ac-482e-b768-95d3fcd1bb08">
+<p id="section-5-1">The following human (more-or-less) protagonists were involved
+in the two incidents recounted as lore of the Knights of the
+Round Table:<a href="#section-5-1" class="pilcrow">¶</a></p>
+</div>
+<div id="_122109df-a773-4849-b073-6f9e49896f32">
+<table class="center" id="table-1">
+        <caption><a href="#table-1" class="selfRef">Table 1</a></caption>
+<thead>
+          <tr>
+            <th class="text-left" rowspan="1" colspan="1">French Castle</th>
+            <th class="text-left" rowspan="1" colspan="1">Cave of Caerbannog</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="text-left" rowspan="1" colspan="2">King Arthur</td>
+          </tr>
+          <tr>
+            <td class="text-left" rowspan="1" colspan="2">Patsy</td>
+          </tr>
+          <tr>
+            <td class="text-left" rowspan="1" colspan="2">Sir Bedevere the Wise</td>
+          </tr>
+          <tr>
+            <td class="text-left" rowspan="1" colspan="2">Sir Galahad the Pure</td>
+          </tr>
+          <tr>
+            <td class="text-left" rowspan="1" colspan="2">Sir Lancelot the Brave</td>
+          </tr>
+          <tr>
+            <td class="text-left" rowspan="1" colspan="2">Sir Robin the Not-quite-so-brave-as-Sir-Lancelot</td>
+          </tr>
+          <tr>
+            <td class="text-left" rowspan="1" colspan="1">French Guard with Outrageous Accent</td>
+            <td class="text-left" rowspan="1" colspan="1">Tim the Enchanter</td>
+          </tr>
+          <tr>
+            <td class="text-left" rowspan="1" colspan="1">Other French Guards</td>
+            <td class="text-left" rowspan="1" colspan="1">Brother Maynard</td>
+          </tr>
+          <tr>
+            <td class="text-left" rowspan="1" colspan="1"></td>
+            <td class="text-left" rowspan="1" colspan="1">The Lector</td>
+          </tr>
+          <tr>
+            <td class="text-center" rowspan="3" colspan="1">not yet recruited</td>
+            <td class="text-right" rowspan="1" colspan="1">Sir Bors</td>
+          </tr>
+          <tr>
+            <td class="text-right" rowspan="1" colspan="1">Sir Gawain</td>
+          </tr>
+          <tr>
+            <td class="text-right" rowspan="1" colspan="1">Sir Ector</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td class="text-left" rowspan="1" colspan="1">Retinue of sundry knights</td>
+            <td class="text-left" rowspan="1" colspan="1">Retinue of sundry more knights than at the French Castle</td>
+          </tr>
+        </tfoot>
+      </table>
+</div>
+<div id="_past_the_killer_rabbit">
+<section id="section-5.1">
+        <h3 id="name-past-the-killer-rabbit">
+<a href="#section-5.1" class="section-number selfRef">5.1. </a><a href="#name-past-the-killer-rabbit" class="section-name selfRef">Past the Killer Rabbit</a>
+        </h3>
+<div id="_3f9ac3a3-2a91-4a3c-b515-bdfbfe5ec187">
+<p id="section-5.1-1">Once the Killer Rabbit of Caerbannog (<a href="#killer-bunny" class="xref">Figure 3</a>) had been
+dispatched, the Knights of the Round Table uncovered the last
+words of Joseph of Arimathea, inscribed on the Cave of Caerbannog
+in Aramaic.  While the precise Aramaic wording has not survived,
+we trust the following Hebrew subtitles will serve as an
+acceptable substitute:<a href="#section-5.1-1" class="pilcrow">¶</a></p>
+</div>
+<blockquote id="section-5.1-2" cite="https://context.reverso.net">
+          <div id="_dea505b5-f356-4193-b19f-1db149c40321">
+<p id="section-5.1-2.1">.&amp;#1499;&amp;#1488;&amp;#1503; &amp;#1488;&amp;#1493;&amp;#1500;&amp;#1497; &amp;#1497;&amp;#1502;&amp;#1510;&amp;#1488;&amp;#1493; &amp;#1492;&amp;#1502;&amp;#1497;&amp;#1500;&amp;#1497;&amp;#1501; &amp;#1492;&amp;#1488;&amp;#1495;&amp;#1512;&amp;#1493;&amp;#1504;&amp;#1493;&amp;#1514; &amp;#1513;&amp;#1500; &amp;#1497;&amp;#1493;&amp;#1505;&amp;#1507; &amp;#1502;&amp;#1488;&amp;#1512;&amp;#1502;&amp;#1514;&amp;#1497;&amp;#1492;
+.&amp;#1502;&amp;#1497; &amp;#1488;&amp;#1513;&amp;#1512; &amp;#1497;&amp;#1492;&amp;#1497;&amp;#1492; &amp;#1488;&amp;#1502;&amp;#1497;&amp;#1509; &amp;#1493;&amp;#1489;&amp;#1506;&amp;#1500; &amp;#1504;&amp;#1508;&amp;#1513; &amp;#1496;&amp;#1492;&amp;#1493;&amp;#1512;&amp;#1492; &amp;#1497;&amp;#1493;&amp;#1499;&amp;#1500; &amp;#1500;&amp;#1502;&amp;#1510;&amp;#1493;&amp;#1488; &amp;#1488;&amp;#1514; &amp;#1492;&amp;#1490;&amp;#1489;&amp;#1497;&amp;#1506; &amp;#1492;&amp;#1511;&amp;#1491;&amp;#1493;&amp;#1513; &amp;#1489;&amp;#1496;&amp;#1497;&amp;#1512;&amp;#1514; &amp;#1488;&amp;#1488;&amp;#1488;&amp;#1488;&amp;#1488;&amp;#1488;&amp;#1488;&amp;#1492;<a href="#section-5.1-2.1" class="pilcrow">¶</a></p>
+</div>
+<div id="_1dcea3c1-2146-48fe-af24-ad2374a68c02">
+<p id="section-5.1-2.2">"Here may be found the last words of Joseph of Arimathea.
+He who is valiant and pure of spirit may find the Holy Grail
+in the castle of - Aaaargh."<a href="#section-5.1-2.2" class="pilcrow">¶</a></p>
+</div>
+<cite>— <a href="https://context.reverso.net">Joseph of Arimathea</a></cite>
+</blockquote>
+</section>
+</div>
+</section>
+</div>
+<div id="_iana_considerations">
+<section id="section-6">
+      <h2 id="name-iana-considerations">
+<a href="#section-6" class="section-number selfRef">6. </a><a href="#name-iana-considerations" class="section-name selfRef">IANA Considerations</a>
+      </h2>
+<div id="_eddfef19-eae5-4628-aec9-93ebe7e26314">
+<p id="section-6-1">IANA might consider a registry to track the mythical, especially
+ravaging beasts, such as the Killer Rabbit, who haunt the Internet.<a href="#section-6-1" class="pilcrow">¶</a></p>
+</div>
+</section>
+</div>
+<div id="_security_considerations">
+<section id="section-7">
+      <h2 id="name-security-considerations">
+<a href="#section-7" class="section-number selfRef">7. </a><a href="#name-security-considerations" class="section-name selfRef">Security Considerations</a>
+      </h2>
+<div id="_92f80693-aa53-41da-a2bb-226b8ba1f8cc">
+<p id="section-7-1">Do not let the Killer Rabbit out under any circumstance.<a href="#section-7-1" class="pilcrow">¶</a></p>
+</div>
+<div id="_a8609007-e914-459e-b205-52ea82f23fcb">
+<p id="section-7-2">I repeat. Do not let the Killer Rabbit (<a href="#killer-bunny" class="xref">Figure 3</a>) out.<a href="#section-7-2" class="pilcrow">¶</a></p>
+</div>
+</section>
+</div>
+<div id="grail_film">
+<section id="section-8">
+      <h2 id="name-monty-python-and-the-holy-g">
+<a href="#section-8" class="section-number selfRef">8. </a><a href="#name-monty-python-and-the-holy-g" class="section-name selfRef">Monty Python and the Holy Grail</a>
+      </h2>
+<p id="section-8-1">&lt;fetched&gt;2021-06-30&lt;/fetched&gt;<a href="#section-8-1" class="pilcrow">¶</a></p>
+<p id="section-8-2">&lt;date type="published"&gt;
+    &lt;on&gt;1975&lt;/on&gt;
+  &lt;/date&gt;<a href="#section-8-2" class="pilcrow">¶</a></p>
+<p id="section-8-3">&lt;contributor&gt;
+    &lt;role type="author"/&gt;
+    &lt;person&gt;
+      &lt;name&gt;
+        &lt;initial&gt;G.&lt;/initial&gt;
+        &lt;surname&gt;Chapman&lt;/surname&gt;
+      &lt;/name&gt;
+    &lt;/person&gt;
+  &lt;/contributor&gt;<a href="#section-8-3" class="pilcrow">¶</a></p>
+<p id="section-8-4">&lt;contributor&gt;
+    &lt;role type="author"/&gt;
+    &lt;person&gt;
+      &lt;name&gt;
+        &lt;initial&gt;J.&lt;/initial&gt;
+        &lt;surname&gt;Cleese&lt;/surname&gt;
+      &lt;/name&gt;
+    &lt;/person&gt;
+  &lt;/contributor&gt;<a href="#section-8-4" class="pilcrow">¶</a></p>
+<p id="section-8-5">&lt;contributor&gt;
+    &lt;role type="author"/&gt;
+    &lt;person&gt;
+      &lt;name&gt;
+        &lt;initial&gt;E.&lt;/initial&gt;
+        &lt;surname&gt;Idle&lt;/surname&gt;
+      &lt;/name&gt;
+    &lt;/person&gt;
+  &lt;/contributor&gt;<a href="#section-8-5" class="pilcrow">¶</a></p>
+<p id="section-8-6">&lt;contributor&gt;
+    &lt;role type="author"/&gt;
+    &lt;person&gt;
+      &lt;name&gt;
+        &lt;initial&gt;T.&lt;/initial&gt;
+        &lt;surname&gt;Gilliam&lt;/surname&gt;
+      &lt;/name&gt;
+    &lt;/person&gt;
+  &lt;/contributor&gt;<a href="#section-8-6" class="pilcrow">¶</a></p>
+<p id="section-8-7">&lt;contributor&gt;
+    &lt;role type="author"/&gt;
+    &lt;person&gt;
+      &lt;name&gt;
+        &lt;initial&gt;T.&lt;/initial&gt;
+        &lt;surname&gt;Jones&lt;/surname&gt;
+      &lt;/name&gt;
+    &lt;/person&gt;
+  &lt;/contributor&gt;<a href="#section-8-7" class="pilcrow">¶</a></p>
+<p id="section-8-8">&lt;contributor&gt;
+    &lt;role type="author"/&gt;
+    &lt;person&gt;
+      &lt;name&gt;
+        &lt;initial&gt;M.&lt;/initial&gt;
+        &lt;surname&gt;Palin&lt;/surname&gt;
+      &lt;/name&gt;
+    &lt;/person&gt;
+  &lt;/contributor&gt;<a href="#section-8-8" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="_normative_references">
+<section id="section-9">
+      <h2 id="name-normative-references">
+<a href="#section-9" class="section-number selfRef">9. </a><a href="#name-normative-references" class="section-name selfRef">Normative References</a>
+      </h2>
+<dl class="references">
+<dt id="RFC2119">[RFC2119]</dt>
+    <dd>
+<span class="refAuthor">Bradner, S.</span>, <span class="refTitle">"Key words for use in RFCs to Indicate Requirement Levels"</span>, <span class="refContent">RFC 2119</span>, <span class="seriesInfo">IETF RFC 2119</span>, <span class="seriesInfo">DOI 10.17487/RFC2119</span>, <time datetime="1997-03" class="refDate">March 1997</time>, <span>&lt;<a href="https://www.rfc-editor.org/info/rfc2119">https://www.rfc-editor.org/info/rfc2119</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+</dl>
+</section>
+</div>
+<div id="_informative_references">
+<section id="section-10">
+      <h2 id="name-informative-references">
+<a href="#section-10" class="section-number selfRef">10. </a><a href="#name-informative-references" class="section-name selfRef">Informative References</a>
+      </h2>
+<dl class="references">
+<dt id="RFC7990">[RFC7990]</dt>
+      <dd>
+<span class="refAuthor">Flanagan, H.</span>, <span class="refTitle">"RFC Format Framework"</span>, <span class="refContent">IETF RFC 7990</span>, <span class="seriesInfo">IETF RFC 7990</span>, <span class="seriesInfo">DOI 10.17487/RFC7990</span>, <time datetime="2016-12" class="refDate">December 2016</time>, <span>&lt;<a href="https://www.rfc-editor.org/info/rfc7990">https://www.rfc-editor.org/info/rfc7990</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC2635">[RFC2635]</dt>
+      <dd>
+<span class="refAuthor">Hambridge, S.</span> and <span class="refAuthor">A. Lunde</span>, <span class="refTitle">"DON'T SPEW A Set of Guidelines for Mass Unsolicited Mailings and Postings (spam*)"</span>, <span class="refContent">RFC 2635</span>, <span class="seriesInfo">IETF RFC 2635</span>, <span class="seriesInfo">DOI 10.17487/RFC2635</span>, <time datetime="1999-06" class="refDate">June 1999</time>, <span>&lt;<a href="https://www.rfc-editor.org/info/rfc2635">https://www.rfc-editor.org/info/rfc2635</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC8140">[RFC8140]</dt>
+      <dd>
+<span class="refAuthor">Farrel, A.</span>, <span class="refTitle">"The Arte of ASCII: Or, An True and Accurate Representation of an Menagerie of Thynges Fabulous and Wonderful in Ye Forme of Character"</span>, <span class="refContent">RFC 8140</span>, <span class="seriesInfo">IETF RFC 8140</span>, <span class="seriesInfo">DOI 10.17487/RFC8140</span>, <time datetime="2017-04" class="refDate">April 2017</time>, <span>&lt;<a href="https://www.rfc-editor.org/info/rfc8140">https://www.rfc-editor.org/info/rfc8140</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC8174">[RFC8174]</dt>
+    <dd>
+<span class="refAuthor">Leiba, B.</span>, <span class="refTitle">"Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words"</span>, <span class="refContent">RFC 8174</span>, <span class="seriesInfo">IETF RFC 8174</span>, <span class="seriesInfo">DOI 10.17487/RFC8174</span>, <time datetime="2017-05" class="refDate">May 2017</time>, <span>&lt;<a href="https://www.rfc-editor.org/info/rfc8174">https://www.rfc-editor.org/info/rfc8174</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+</dl>
+</section>
+</div>
+<section id="section-appendix.a">
+      <h2 id="name-index">
+<a href="#name-index" class="section-name selfRef">Index</a>
+      </h2>
+<div id="rfc.index.index">
+<p id="section-appendix.a-1">
+        <a href="#rfc.index.u67" class="xref">C</a>
+        <a href="#rfc.index.u72" class="xref">H</a>
+        <a href="#rfc.index.u82" class="xref">R</a><a href="#section-appendix.a-1" class="pilcrow">¶</a></p>
+</div>
+<ul class="normal ulEmpty">
+<li class="normal ulEmpty" id="section-appendix.a-2.1">
+          <div id="rfc.index.u67">
+<p id="section-appendix.a-2.1.1" class="keepWithNext">
+            <a href="#rfc.index.u67" class="xref">C</a><a href="#section-appendix.a-2.1.1" class="pilcrow">¶</a></p>
+</div>
+<ul class="compact normal ulEmpty">
+<li class="compact normal ulEmpty" id="section-appendix.a-2.1.2.1">
+              <span class="break"></span><dl class="dlParallel dlCompact" id="section-appendix.a-2.1.2.1.1">
+                <dt id="section-appendix.a-2.1.2.1.1.1">Cave of Caerbannog</dt>
+                <dd style="margin-left: 1.5em" id="section-appendix.a-2.1.2.1.1.2">
+                  <p id="section-appendix.a-2.1.2.1.1.2.1">
+                    <a href="#_2de14a12-34e0-43cf-84ea-d5ef147ee03a" class="xref">Section 4.2, Paragraph 3</a><a href="#section-appendix.a-2.1.2.1.1.2.1" class="pilcrow">¶</a></p>
+</dd>
+              <dd class="break"></dd>
+</dl>
+</li>
+          </ul>
+</li>
+        <li class="normal ulEmpty" id="section-appendix.a-2.2">
+          <div id="rfc.index.u72">
+<p id="section-appendix.a-2.2.1" class="keepWithNext">
+            <a href="#rfc.index.u72" class="xref">H</a><a href="#section-appendix.a-2.2.1" class="pilcrow">¶</a></p>
+</div>
+<ul class="compact normal ulEmpty">
+<li class="compact normal ulEmpty" id="section-appendix.a-2.2.2.1">
+              <span class="break"></span><dl class="dlParallel dlCompact" id="section-appendix.a-2.2.2.1.1">
+                <dt id="section-appendix.a-2.2.2.1.1.1">Holy Hand Grenade of Antioch</dt>
+                <dd style="margin-left: 1.5em" id="section-appendix.a-2.2.2.1.1.2">
+                  <p id="section-appendix.a-2.2.2.1.1.2.1">
+                    <a href="#_2de14a12-34e0-43cf-84ea-d5ef147ee03a" class="xref">Section 4.2, Paragraph 3</a><a href="#section-appendix.a-2.2.2.1.1.2.1" class="pilcrow">¶</a></p>
+</dd>
+              <dd class="break"></dd>
+</dl>
+</li>
+          </ul>
+</li>
+        <li class="normal ulEmpty" id="section-appendix.a-2.3">
+          <div id="rfc.index.u82">
+<p id="section-appendix.a-2.3.1" class="keepWithNext">
+            <a href="#rfc.index.u82" class="xref">R</a><a href="#section-appendix.a-2.3.1" class="pilcrow">¶</a></p>
+</div>
+<ul class="compact normal ulEmpty">
+<li class="compact normal ulEmpty" id="section-appendix.a-2.3.2.1">
+              <span class="break"></span><dl class="dlParallel dlCompact" id="section-appendix.a-2.3.2.1.1">
+                <dt id="section-appendix.a-2.3.2.1.1.1">relics</dt>
+                <dd style="margin-left: 1.5em" id="section-appendix.a-2.3.2.1.1.2"></dd>
+                <dd class="break"></dd>
+<dt id="section-appendix.a-2.3.2.1.1.3"></dt>
+                <dd style="margin-left: 1.5em" id="section-appendix.a-2.3.2.1.1.4">
+                  <span class="break"></span><dl class="dlParallel dlCompact" id="section-appendix.a-2.3.2.1.1.4.1">
+                    <dt id="section-appendix.a-2.3.2.1.1.4.1.1">Christian</dt>
+                    <dd style="margin-left: 1.5em" id="section-appendix.a-2.3.2.1.1.4.1.2">
+                      <p id="section-appendix.a-2.3.2.1.1.4.1.2.1">
+                        <a href="#_2de14a12-34e0-43cf-84ea-d5ef147ee03a" class="xref">Section 4.2, Paragraph 3</a><a href="#section-appendix.a-2.3.2.1.1.4.1.2.1" class="pilcrow">¶</a></p>
+</dd>
+                    <dd class="break"></dd>
+<dt id="section-appendix.a-2.3.2.1.1.4.1.3">monarchic</dt>
+                    <dd style="margin-left: 1.5em" id="section-appendix.a-2.3.2.1.1.4.1.4">
+                      <p id="section-appendix.a-2.3.2.1.1.4.1.4.1">
+                        <a href="#_2de14a12-34e0-43cf-84ea-d5ef147ee03a" class="xref">Section 4.2, Paragraph 3</a><a href="#section-appendix.a-2.3.2.1.1.4.1.4.1" class="pilcrow">¶</a></p>
+</dd>
+                  <dd class="break"></dd>
+</dl>
+</dd>
+              <dd class="break"></dd>
+</dl>
+</li>
+          </ul>
+</li>
+      </ul>
+</section>
+<div id="authors-addresses">
+<section id="section-appendix.b">
+      <h2 id="name-authors-address">
+<a href="#name-authors-address" class="section-name selfRef">Author's Address</a>
+      </h2>
+<address class="vcard">
+        <div dir="auto" class="left"><span class="fn nameRole">Arthur son of Uther Pendragon</span></div>
+<div dir="auto" class="left"><span class="org">Camelot</span></div>
+<div dir="auto" class="left"><span class="street-address">Palace<br>Camel Lot 1, Camelot, England</span></div>
+<div dir="auto" class="left"><span class="country-name">United Kingdom</span></div>
+<div class="email">
+<span>Email:</span>
+<a href="mailto:arthur.pendragon@ribose.com" class="email">arthur.pendragon@ribose.com</a>
+</div>
+<div class="url">
+<span>URI:</span>
+<a href="http://camelot.gov.example" class="url">http://camelot.gov.example</a>
+</div>
+</address>
+</section>
+</div>
+<script>const toc = document.getElementById("toc");
+toc.querySelector("h2").addEventListener("click", e => {
+  toc.classList.toggle("active");
+});
+toc.querySelector("nav").addEventListener("click", e => {
+  toc.classList.remove("active");
+});
+</script>
+</body>
+</html>

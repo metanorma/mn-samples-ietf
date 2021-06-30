@@ -1,0 +1,44 @@
+/__w/mn-samples-ietf/mn-samples-ietf/site/documents/antioch/document.err errors
+
+
+== Bibliography
+
+(XML Line 000644): Reference grail_film is missing a document identifier (docid)
+	<clause id="_monty_python_and_the_holy_grail" inline-header="false" bibitem="true" obligation="normative">
+	
+	<dl id="_6d3e0f17-8975-48ec-bdbc-1ce5fcf9a9c8">
+	<dt>id</dt>
+	
+
+
+== Metanorma XML Style Warning
+
+(XML Line 000265): Hanging paragraph in clause
+	<clause id="caerbannog" inline-header="false" obligation="normative"><title>The Mythos of Caerbannog</title><p id="_b08642d4-2edf-470b-8e46-42107c4e3983">The <em>Cave of Caerbannog</em> has been well-established in the mythology
+	of Camelot (as recounted by Monty Python) as the lair of the
+	Legendary Black Beast of Arrrghhh, more commonly known today as the
+	<strong>Killer Rabbit of Caerbannog</strong> <xref target="killer_rabbit_caerbannog"/>.
+	It is the encounter between the Killer Rabbit of Caerbannog and the
+(XML Line 000549): Hanging paragraph in clause
+	<clause id="_dramatis_personae" inline-header="false" obligation="normative"><title>Dramatis Personae</title><p id="_844b99e1-70ac-482e-b768-95d3fcd1bb08">The following human (more-or-less) protagonists were involved
+	in the two incidents recounted as lore of the Knights of the
+	Round Table:</p>
+	<table id="_122109df-a773-4849-b073-6f9e49896f32">
+	<thead>
+(XML Line 000552): Table should have title
+	<table id="_122109df-a773-4849-b073-6f9e49896f32">
+	<thead>
+	<tr>
+	<th valign="top" align="left">French Castle</th>
+	<th valign="top" align="left">Cave of Caerbannog</th>
+
+
+== Metanorma XML Syntax
+
+(XML Line 000018:30): element "br" not allowed here; expected the element end-tag or text
+(XML Line 000018:64): element "br" not allowed here; expected the element end-tag or text
+(XML Line 000111:88): attribute "obligation" not allowed here; expected attribute "language", "numbered", "removeInRFC", "script" or "toc"
+(XML Line 000133:36): IDREF "RFC7990" without matching ID
+(XML Line 000628:26): element "bibitem" not allowed here; expected the element end-tag or element "clause", "definitions" or "terms"
+(XML Line 000690:33): element "passthrough" not allowed here; expected the element end-tag or element "bibitem", "note" or "references"
+(XML Line 000690:33): found attribute "formats", but no attributes allowed here
