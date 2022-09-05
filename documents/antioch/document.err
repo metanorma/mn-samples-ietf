@@ -1,0 +1,50 @@
+/__w/mn-samples-ietf/mn-samples-ietf/site/documents/antioch/document.err errors
+
+
+== Bibliography
+
+(XML Line 000615): Reference grail_film is missing a document identifier (docid)
+	<clause id="_monty_python_and_the_holy_grail" inline-header="false" bibitem="true" obligation="normative">
+	
+	<dl id="_d86353a7-246f-4f30-a797-fc31be4582b6"><dt>id</dt>
+	
+	<dt>contributor</dt>
+
+
+== Anchors
+
+(XML Line 000090): Crossreference target RFC7990 is undefined
+	<xref target="RFC7990"/>
+
+
+== Metanorma XML Style Warning
+
+(XML Line 000227): Hanging paragraph in clause
+	<clause id="caerbannog" inline-header="false" obligation="normative">
+	<title>The Mythos of Caerbannog</title>
+	<p id="_b99a7b3f-68b2-9069-41a8-61d893309d4e">The <em>Cave of Caerbannog</em> has been well-established in the mythology
+	of Camelot (as recounted by Monty Python) as the lair of the
+	Legendary Black Beast of Arrrghhh, more commonly known today as the
+(XML Line 000486): Hanging paragraph in clause
+	<clause id="_dramatis_personae" inline-header="false" obligation="normative">
+	<title>Dramatis Personae</title>
+	<p id="_7bc7055d-1cdd-acaf-a5a7-8482246119e6">The following human (more-or-less) protagonists were involved
+	in the two incidents recounted as lore of the Knights of the
+	Round Table:</p>
+(XML Line 000492): Table should have title
+	<table id="_f87ba086-52e3-9b5d-05fc-52c5b027fec9"><thead><tr><th valign="top" align="left">French Castle</th>
+	<th valign="top" align="left">Cave of Caerbannog</th>
+	</tr></thead>
+	<tbody><tr><td colspan="2" valign="top" align="left">King Arthur</td>
+	</tr><tr><td colspan="2" valign="top" align="left">Patsy</td>
+
+
+== Metanorma XML Syntax
+
+(XML Line 000011:39): element "br" not allowed here; expected the element end-tag or text
+(XML Line 000011:73): element "br" not allowed here; expected the element end-tag or text
+(XML Line 000061:88): attribute "obligation" not allowed here; expected attribute "language", "numbered", "removeInRFC", "script" or "toc"
+(XML Line 000090:36): IDREF "RFC7990" without matching ID
+(XML Line 000552:26): element "bibitem" not allowed here; expected the element end-tag or element "clause", "definitions", "floating-title" or "terms"
+(XML Line 000555:26): element "date" not allowed yet; missing required element "docidentifier"
+(XML Line 000653:33): element "passthrough" not allowed here; expected the element end-tag or element "bibitem", "note" or "references"

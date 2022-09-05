@@ -1,0 +1,27 @@
+/__w/mn-samples-ietf/mn-samples-ietf/site/documents/example/document.err errors
+
+
+== Metanorma XML Style Warning
+
+(XML Line 000281): Hanging paragraph in clause
+	<clause id="frame" inline-header="false" obligation="normative">
+	<title>Frame Format</title>
+	<p id="_a3b7c376-3b5a-3844-6e53-80e3ec0cdaf6">The IP <em>datagram</em> is <strong>printed</strong>, on a small scroll of paper, in
+	hexadecimal, with each octet separated by whitestuff and blackstuff.
+	The scroll of paper is wrapped around one leg of the avian carrier.
+(XML Line 000330): Hanging paragraph in clause
+	<clause id="_definitions" inline-header="false" obligation="normative">
+	<title>Definitions</title>
+	<dl id="_56010ff7-ab56-889b-82f4-b8d1d1463d52"><dt>OSCCA-compliant</dt>
+	<dd><p id="_febba969-af6a-0a22-3956-9d17b077f8da">All cryptographic algorithms used are compliant with OSCCA  regulations.</p>
+	</dd>
+
+
+== Metanorma XML Syntax
+
+(XML Line 000011:50): element "br" not allowed here; expected the element end-tag or text
+(XML Line 000011:64): element "br" not allowed here; expected the element end-tag or text
+(XML Line 000015:50): element "br" not allowed here; expected the element end-tag or text
+(XML Line 000015:64): element "br" not allowed here; expected the element end-tag or text
+(XML Line 000263:64): element "workgroup" not allowed here; expected the element end-tag or element "committee"
+(XML Line 000264:88): attribute "obligation" not allowed here; expected attribute "language", "numbered", "removeInRFC", "script" or "toc"
