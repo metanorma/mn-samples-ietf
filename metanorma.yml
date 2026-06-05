@@ -2,8 +2,9 @@
 metanorma:
   source:
     files:
-      - sources/antioch/document.adoc
+      #- sources/antioch/document.adoc
       - sources/example/document.adoc
+      - sources/rfc-3339/document.adoc
 
   collection:
     name: Metanorma-IETF sample documents
