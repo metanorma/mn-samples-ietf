@@ -1,0 +1,24 @@
+= X
+A
+:doctype: internet-draft
+:name: draft-killer-rabbit-00
+:status: informational
+:fullname: A
+:surname: A
+:revdate: 2017-11-03
+
+== Introduction
+
+The *Killer Rabbit of Caerbannog*, that most formidable foe of
+the Knights and of all that is holy or carrot-like, has been
+depicted diversely in lay and in song. We venture to say,
+_contra_ the claim made in <<RFC8140,of,section=4.1>>,
+that the Killer Rabbit of Caerbannog truly is the most afeared
+of all the creatures. Short of sanctified ordnance such as
+<<holy_hand_grenade,format=title>>, there are few remedies
+known against its awful lapine powers.
+
+[[holy_hand_grenade]]
+[bibliography]
+== Normative references
+* [[[RFC8140,RFC 8140]]], _X_

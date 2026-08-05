@@ -1,0 +1,35 @@
+= The Holy Hand Grenade of Antioch
+Arthur Pendragon
+:doctype: internet-draft
+:workgroup: silly
+:fullname: Arthur Pendragon
+:surname: Pendragon
+:givenname: Arthur
+
+[[xyz]]
+== Hello
+Hello
+
+* a <<RFC2119,2.3 of: See internet draft subsection>>
+* b <<I-D.abarth-cake>>
+* c <<xyz,format=counter: xyzzy>>
+* d <<biblio>>
+* e <<AsciiDoc,AsciiDoctor>>
+* f <<mathrefs>>
+
+
+[[biblio]]
+=== Biblio
+See biblio
+
+[bibliography]
+== Normative References
+
+* [[[RFC2119,RFC 2119]]]
+* [[[AsciiDoc]]] Rackham, S., "AsciiDoc: Text based document generation", http://www.methods.co.nz/asciidoc/, November 2013.
+
+[bibliography]
+== Informative References
+
+* [[[I-D.abarth-cake,I-D.abarth-cake]]]
+* [[[mathrefs]]] "AsciiMath (http://asciimath.org) and MathJax (https://www.mathjax.org)", November 2017.

@@ -1,0 +1,265 @@
+= Put Your Internet Draft Title Here
+Elwyn Davies <elwynd@dial.pipex.com>
+:doctype: internet-draft
+:name: draft-ietf-xml2rfc-template-06
+:ipr: trust200902
+:status: info
+:abbrev: Abbreviated Title
+:fullname: Elwyn Davies
+:surname: Davies
+:givenname: Elwyn
+:initials: E.B.
+:role: editor
+:organization: Folly Consulting
+:city: Soham
+:country: UK
+:phone: +44 7889 488 335
+:email: elwynd@dial.pipex.com
+:revdate: 2010-04-01
+:area: General
+:workgroup: Internet Engineering Task Force
+:keyword: template
+:inline-definition-lists: true
+:compact: yes
+:subcompact: no
+:rfc2629xslt: true
+
+Insert an abstract: MANDATORY. This template is for creating an
+Internet Draft.
+
+== Introduction
+
+The original specification of xml2rfc format is in <<RFC2629,RFC 2629>>.
+
+=== Requirements Language
+
+The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
+"SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this
+document are to be interpreted as described in <<RFC2119,RFC 2119>>.
+
+[[simple_list]]
+== Simple List
+
+List styles: 'empty', 'symbols', 'letters', 'numbers', 'hanging',
+'format'.
+
+* First bullet
+
+* Second bullet
+
+You can write text here as well.
+//[Note: Asciidoc will force new paragraph]
+
+== Figures
+
+Figures should not exceed 69 characters wide to allow for the indent
+of sections.
+
+[[xml_happy]]
+[align=center]
+====
+Preamble text - can be omitted or empty.
+
+[align=left]
+....
++-----------------------+
+| Use XML, be Happy :-) |
+|_______________________|
+....
+
+Cross-references allowed in pre- and postamble. <<min_ref>>.
+====
+
+The CDATA means you don't need to escape meta-characters (especially
+< (\&lt;) and & (\&amp;)) but is not essential.
+Figures may also have a title attribute but it won't be displayed unless
+there is also an anchor. White space, both horizontal and vertical, is
+significant in figures even if you don't use CDATA.
+
+== Subsections and Tables
+
+=== A Subsection
+
+By default 3 levels of nesting show in table of contents but that
+can be adjusted with the value of the "tocdepth" processing
+instruction.
+
+=== Tables
+
+pass:[..] are very similar to figures:
+
+//[Note: Asciidoc does not support preambles and postambles within tables.]
+
+Tables use ttcol to define column headers and widths. Every cell then has a "c" element for its content.
+
+[[table_example]]
+.A Very Simple Table
+[cols="2*^", frame="sides", grid="cols"]
+|===
+|ttcol #1 |ttcol #2
+
+|c #1 |c #2
+|c #3 |c #4
+|c #5 |c #6
+|===
+
+which is a very simple example.
+
+[[nested_lists]]
+== More about Lists
+Lists with 'hanging labels': the list item is indented the amount of
+the hangIndent:
+
+[hang-indent=8]
+short:: With a label shorter than the hangIndent.
+
+fantastically long label:: With a label longer than the hangIndent.
+
+vspace_trick:: {blank} +
+Forces the new item to start on a new line.
+
+Simulating more than one paragraph in a list item using
+<vspace>:
+
+[loweralpha]
+. First, a short item.
+
+. Second, a longer list item.
++
+{blank}
++
+And something that looks like a separate pararaph..
+
+NOTE: In Asciidoc, it *is* a separate paragraph.
+
+Simple indented paragraph using the "empty" style:
+
+[empty,hang-indent=8]
+* The quick, brown fox jumped over the lazy dog and lived to fool
+         many another hunter in the great wood in the west.
+
+
+=== Numbering Lists across Lists and Sections
+Numbering items continuously although they are in separate
+<list> elements, maybe in separate sections using the "format"
+style and a "counter" variable.
+
+First list:
+
+[hang-indent=4,counter=reqs,format=R%d]
+. #1
+
+. #2
+
+. #3
+
+Specify the indent explicitly so that all the items line up
+nicely.
+
+Second list:
+[hang-indent=4,counter=reqs,format=R%d]
+. #4
+
+. #5
+
+. #6
+
+=== Where the List Numbering Continues
+List continues here.
+
+Third list:
+[hang-indent=4,counter=reqs,format=R%d]
+. #7
+
+. #8
+
+. #9
+
+. #10
+
+The end of the list.
+
+[[codeExample]]
+== Example of Code or MIB Module To Be Extracted
+
+// NOTE: in asciidoctor-rfc output we're missing an empty line before
+// the code block and after it. Can't figure out a way to create that...
+
+====
+The <artwork> element has a number of extra attributes
+that can be used to substitute a more aesthetically pleasing rendition
+into HTML output while continuing to use the ASCII art version in the
+text and nroff outputs (see the xml2rfc README for details). It also
+has a "type" attribute. This is currently ignored except in the case
+'type="abnf"'. In this case the "artwork" is expected to contain a
+piece of valid Augmented Backus-Naur Format (ABNF) grammar. This will
+be syntax checked by xml2rfc and any errors will cause a fatal error
+if the "strict" processing instruction is set to "yes". The ABNF will
+also be colorized in HTML output to highlight the syntactic
+components. Checking of additional "types" may be provided in future
+versions of xml2rfc.
+
+----
+
+/**** an example C program */
+
+#include <stdio.h>
+
+void
+main(int argc, char *argv[])
+{
+   int i;
+
+   printf("program arguments are:\n");
+   for (i = 0; i < argc; i++) {
+       printf("%d: \"%s\"\n", i, argv[i]);
+   }
+
+   exit(0);
+} /* main */
+
+/* end of file */
+
+----
+====
+
+[[Acknowledgements]]
+== Acknowledgements
+This template was derived from an initial version written by Pekka Savola and contributed by him to the xml2rfc project.
+
+This document is part of a plan to make xml2rfc indispensable <<DOMINATION>>.
+
+[[IANA]]
+== IANA Considerations
+This memo includes no request to IANA.
+
+All drafts are required to have an IANA considerations section (see
+<<RFC5226,Guidelines for Writing an IANA Considerations Section in RFCs>> for a guide). If the draft does not require IANA to do
+anything, the section contains an explicit statement that this is the
+case (as above). If there are no requirements for IANA, the section will
+be removed during conversion into an RFC by the RFC Editor.
+
+[[Security]]
+== Security Considerations
+All drafts are required to have a security considerations section.
+See <<RFC3552,RFC 3552>> for a guide.
+
+
+[bibliography]
+== Normative References
+
+* [[[RFC2119,RFC 2119]]]
+* [[[min_ref]]] authSurName, authInitials, "Minimal Reference", 2006.
+
+[bibliography]
+== Informative References
+
+* [[[RFC2629,RFC 2629]]]
+* [[[RFC3552,RFC 3552]]]
+* [[[RFC5226,RFC 5226]]]
+* [[[DOMINATION]]] Mad Dominators, Inc., "Ultimate Plan for Taking Over the World", http://www.example.com/dominator.html, 1984.
+
+[[app-additional]]
+[appendix]
+== Additional Stuff
+This becomes an Appendix.
