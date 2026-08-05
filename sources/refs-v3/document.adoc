@@ -1,0 +1,55 @@
+= vCard Format Specification
+Simon Perreault <simon.perreault@viagenie.ca>
+:doctype: rfc
+:abbrev: IP Datagrams on Avian Carriers
+:obsoletes: RFC 10;RFC 120
+:updates: RFC 2010;RFC 2120
+:name: rfc-1149
+:docnumber: 1149
+:status: full-standard 1149
+:intended-series: full-standard 1149
+:ipr: trust200902
+:area: Internet
+:workgroup: Network Working Group
+:keyword: this, that
+:revdate: 1990-04-01T00:00:00Z
+:fullname: Simon Perreault
+:surname: Perreault
+:givenname: Simon
+:initials: S.
+:email: simon.perreault@viagenie.ca
+:organization: BBN STC
+:phone: (617) 873-4323
+:uri: http://bbn.com
+:street: 10 Moulton Street
+:city: Cambridge
+:code: MA 02238
+:organization_2: BBN STC
+:phone_2: (617) 873-4323
+:street_2: 10 Moulton Street
+:city_2: Cambridge
+:code_2: MA 02238
+:uri_2: http://opoudjis.net
+:link: http://example1.com,http://example2.com author
+
+== Introduction
+The authors would like to thank Tim Howes, Mark Smith, and Frank
+Dawson, the original authors of <<RFC2119>> and <<RFC2629>>, Pete
+Resnick, who got this effort started and provided help along the way,
+as well as the following individuals who have participated in the
+drafting, review, and discussion of this memo:
+<<RFC2119,RFC 2119>> 0
+<<RFC2119,format=counter: RFC 2119>> 1
+<<RFC2119,section=2.4>> 2
+<<RFC2119,section=2.4>> 3
+
+[bibliography]
+== Normative References
+
+* [[[RFC2629,RFC 2629]]]
+
+[bibliography]
+== Informative References
+
+* [[[RFC2119,RFC 2119]]]
+* [[[RFC3552_5226]]] Rescorla, E. and B. Korver, "Guidelines for Writing RFC Text on Security Considerations", BCP 72, RFC 3552, July 2003; Narten, T. and H. Alvestrand, "Guidelines for Writing an IANA Considerations Section in RFCs", RFC 5226, May 2008.

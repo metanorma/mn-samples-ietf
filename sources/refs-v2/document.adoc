@@ -1,0 +1,43 @@
+= vCard Format Specification
+Simon Perreault <simon.perreault@viagenie.ca>
+:doctype: rfc
+:obsoletes: RFC 2425;RFC 2426;RFC 4770
+:updates: RFC 2739
+:name: rfc-6350
+:docnumber: 6350
+:revdate: 2011-08-31
+:submission-type: IETF
+:status: standard
+:intended-series: full-standard 6350
+:fullname: Simon Perreault
+:surname: Perreault
+:givenname: Simon
+:initials: S.
+:organization: Viagenie
+:email: simon.perreault@viagenie.ca
+:street: 2875 Laurier, suite D2-630
+:region: Quebec, QC
+:code: G1V 2M2
+:country: Canada
+:phone: +1 418 656 9254
+:uri: http://www.viagenie.ca
+:link: urn:issn:2070-1721 item
+
+== Introduction
+The authors would like to thank Tim Howes, Mark Smith, and Frank
+Dawson, the original authors of <<RFC2119>> and <<RFC2629>>, Pete
+Resnick, who got this effort started and provided help along the way,
+as well as the following individuals who have participated in the
+drafting, review, and discussion of this memo.
+<<RFC2119,RFC 2119>>
+<<RFC2119,format=counter: RFC 2119>>
+
+[bibliography]
+== Normative References
+
+* [[[RFC2629,RFC 2629]]]
+
+[bibliography]
+== Informative References
+
+* [[[RFC2119,RFC 2119]]]

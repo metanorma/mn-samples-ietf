@@ -1,0 +1,35 @@
+= Many fine lunches and dinners
+Carsten Bormann <cabo@tzi.org>
+:doctype: internet-draft
+:abbrev: mfld
+:name: draft-mfld-00
+:status: informational
+:intended-series: informational
+:toc-include: yes
+:sort-refs: yes
+:sym-refs: yes
+:fullname: Carsten Bormann
+:surname: Bormann
+:givenname: Carsten
+:initials: C.
+:organization: Universität Bremen TZI
+:street: Postfach 330440
+:city: Bremen
+:code: D-28359
+:country: Germany
+:phone: +49-421-218-63921
+:email: cabo@tzi.org
+:revdate: 2017-11-03
+:comments: yes
+:rfc2629xslt: true
+
+insert abstract here
+
+== Introduction
+
+This MAY <<RFC2119>> be useful.
+
+[bibliography]
+== Informative References
+
+* [[[RFC2119,RFC 2119]]]
