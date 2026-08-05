@@ -3,6 +3,7 @@ David Waitzman <dwaitzman@BBN.COM>
 :doctype: rfc
 :abbrev: IP Datagrams on Avian Carriers
 :status: info
+:intended-series: informational
 :name: rfc-1149
 :docnumber: 1149
 :ipr: trust200902

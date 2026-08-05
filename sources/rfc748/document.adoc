@@ -3,6 +3,7 @@ M. Crispin
 :doctype: internet-draft
 :abbrev: TELNET RANDOMLY-LOSE Option
 :status: info
+:intended-series: informational
 :name: rfc-748
 :docnumber: 748
 :ipr: trust200902

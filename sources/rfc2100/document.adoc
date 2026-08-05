@@ -3,6 +3,7 @@ Jay R. Ashworth <jra@scfn.thpl.lib.fl.us>
 :doctype: internet-draft
 :abbrev: The Naming of Hosts
 :status: info
+:intended-series: informational
 :name: rfc-2100
 :docnumber: 2100
 :ipr: trust200902

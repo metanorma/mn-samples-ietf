@@ -7,6 +7,7 @@ Simon Perreault <simon.perreault@viagenie.ca>
 :name: rfc-1149
 :docnumber: 1149
 :status: full-standard 1149
+:intended-series: full-standard 1149
 :ipr: trust200902
 :area: Internet
 :workgroup: Network Working Group

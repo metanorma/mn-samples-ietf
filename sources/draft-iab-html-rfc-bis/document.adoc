@@ -14,6 +14,7 @@ Joe Hildebrand <joe-ietf@cursive.net>; Paul Hoffman <paul.hoffman@icann.org>
 :name: 7992
 :docnumber: 7992
 :status: informational
+:intended-series: informational
 :abbrev: HTML for RFCs
 :fullname: Joe Hildebrand
 :surname: Hildebrand

@@ -3,6 +3,7 @@ Richard Hay <rhay@google.com>; Warren Turkal <turkal@google.com>
 :doctype: internet-draft
 :abbrev: TCP Option to Denote Packet Mood
 :status: info
+:intended-series: informational
 :name: rfc-5841
 :docnumber: 5841
 :ipr: trust200902

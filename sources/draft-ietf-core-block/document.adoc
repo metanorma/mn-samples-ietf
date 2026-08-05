@@ -8,6 +8,7 @@ Carsten Bormann <cabo@tzi.org>; Zach Shelby <zach@sensinode.com>
 :workgroup: CoRE Working Group
 :keyword: Internet-Draft
 :status: standard
+:intended-series: standard
 :toc-include: true
 :sort-refs: yes
 :sym-refs: yes

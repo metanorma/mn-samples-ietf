@@ -2,6 +2,7 @@
 Chris Smith <chrissmith@example.com>; Kim Jones <jk@lmn.op>
 :doctype: internet-draft
 :status: standard
+:intended-series: standard
 :name: draft-example-of-xml-00
 :ipr: trust200902
 :consensus: false

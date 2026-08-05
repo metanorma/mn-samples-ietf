@@ -5,6 +5,7 @@ David Waitzman <dwaitzman@BBN.COM>; Nick Nicholas <opoudjis@gmail.com>
 :obsoletes: RFC 10;RFC 120
 :updates: RFC 2010;RFC 2120
 :status: informational
+:intended-series: informational
 :name: rfc-1149
 :docnumber: 1149
 :ipr: trust200902

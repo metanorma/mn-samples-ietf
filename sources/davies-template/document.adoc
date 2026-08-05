@@ -4,6 +4,7 @@ Elwyn Davies <elwynd@dial.pipex.com>
 :name: draft-ietf-xml2rfc-template-06
 :ipr: trust200902
 :status: info
+:intended-series: informational
 :abbrev: Abbreviated Title
 :fullname: Elwyn Davies
 :surname: Davies

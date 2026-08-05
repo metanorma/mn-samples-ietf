@@ -2,6 +2,7 @@
 Editor name <Editor email>
 :doctype: internet-draft
 :status: historic
+:intended-series: historic
 :name: Your MIB Document name here rev07
 :ipr: trust200902
 :abbrev: Your MIB Module document name

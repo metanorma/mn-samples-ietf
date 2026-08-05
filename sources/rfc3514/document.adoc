@@ -3,6 +3,7 @@ Steven M. Bellovin <bellovin@acm.org>
 :doctype: internet-draft
 :abbrev: The Security Flag in the IPv4 Header
 :status: info
+:intended-series: informational
 :name: rfc-3514
 :ipr: trust200902
 :area: Internet

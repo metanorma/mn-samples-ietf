@@ -4,6 +4,7 @@ Carsten Bormann <cabo@tzi.org>
 :abbrev: mfld
 :name: draft-mfld-00
 :status: informational
+:intended-series: informational
 :toc-include: yes
 :sort-refs: yes
 :sym-refs: yes

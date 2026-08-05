@@ -3,6 +3,7 @@ Maximilian Wilhelm <max@rfc2324.org>
 :doctype: internet-draft
 :abbrev: Scenic Routing for IPv6
 :status: info
+:intended-series: informational
 :name: rfc-7511
 :docnumber: 7511
 :ipr: trust200902
