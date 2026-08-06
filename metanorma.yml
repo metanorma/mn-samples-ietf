@@ -5,6 +5,28 @@ metanorma:
       #- sources/antioch/document.adoc
       - sources/example/document.adoc
       - sources/rfc-3339/document.adoc
+      # heritage corpus (mn-samples-ietf#58)
+      - sources/a/document.adoc
+      - sources/biblio-insert-v2/document.adoc
+      - sources/biblio-insert-v3/document.adoc
+      - sources/davies-template/document.adoc
+      - sources/draft-iab-html-rfc-bis/document.adoc
+      - sources/draft-iab-rfc-framework-bis/document.adoc
+      - sources/draft-ietf-core-block/document.adoc
+      - sources/example-v2/document.adoc
+      - sources/hoffmanv2/document.adoc
+      - sources/mib-doc-template/document.adoc
+      - sources/refs-v2/document.adoc
+      - sources/refs-v3/document.adoc
+      - sources/rfc1149/document.adoc
+      - sources/rfc2100/document.adoc
+      - sources/rfc3514/document.adoc
+      - sources/rfc5841/document.adoc
+      - sources/rfc6350/document.adoc
+      - sources/rfc748/document.adoc
+      - sources/rfc7511/document.adoc
+      - sources/skel/document.adoc
+      - sources/stupid-s/document.adoc
 
   collection:
     name: Metanorma-IETF sample documents
