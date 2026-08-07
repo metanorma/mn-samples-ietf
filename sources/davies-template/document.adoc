@@ -2,6 +2,7 @@
 Elwyn Davies <elwynd@dial.pipex.com>
 :doctype: internet-draft
 :name: draft-ietf-xml2rfc-template-06
+:docnumber: draft-ietf-xml2rfc-template-06
 :ipr: trust200902
 :status: info
 :intended-series: informational

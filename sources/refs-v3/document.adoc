@@ -12,7 +12,7 @@ Simon Perreault <simon.perreault@viagenie.ca>
 :area: Internet
 :workgroup: Network Working Group
 :keyword: this, that
-:revdate: 1990-04-01T00:00:00Z
+:revdate: 1990-04-01
 :fullname: Simon Perreault
 :surname: Perreault
 :givenname: Simon
@@ -42,6 +42,11 @@ drafting, review, and discussion of this memo:
 <<RFC2119,format=counter: RFC 2119>> 1
 <<RFC2119,section=2.4>> 2
 <<RFC2119,section=2.4>> 3
+
+== Discussion
+
+This clause exists so that the document body is not empty: the
+Metanorma grammar requires at least one body clause.
 
 [bibliography]
 == Normative References

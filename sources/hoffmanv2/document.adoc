@@ -4,6 +4,7 @@ Chris Smith <chrissmith@example.com>; Kim Jones <jk@lmn.op>
 :status: standard
 :intended-series: standard
 :name: draft-example-of-xml-00
+:docnumber: draft-example-of-xml-00
 :ipr: trust200902
 :consensus: false
 :submission-type: IETF

@@ -9,7 +9,7 @@ M. Crispin
 :ipr: trust200902
 :area: Internet
 :workgroup: Network Working Group
-:revdate: 1978-04-01T00:00:00Z
+:revdate: 1978-04-01
 :fullname: M. Crispin
 :surname: Crispin
 :initials: M.

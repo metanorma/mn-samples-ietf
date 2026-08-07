@@ -9,7 +9,7 @@ Jay R. Ashworth <jra@scfn.thpl.lib.fl.us>
 :ipr: trust200902
 :area: Internet
 :workgroup: Network Working Group
-:revdate: 1997-04-01T00:00:00Z
+:revdate: 1997-04-01
 :fullname: Jay R. Ashworth
 :surname: Ashworth
 :givenname: Jay
