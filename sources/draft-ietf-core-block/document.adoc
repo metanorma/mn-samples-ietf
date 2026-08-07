@@ -2,6 +2,7 @@
 Carsten Bormann <cabo@tzi.org>; Zach Shelby <zach@sensinode.com>
 :doctype: internet-draft
 :name: draft-ietf-core-block-05
+:docnumber: draft-ietf-core-block-05
 :revdate: 2012-01-13
 :ipr: trust200902
 :area: Applications

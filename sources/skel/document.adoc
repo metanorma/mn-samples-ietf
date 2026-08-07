@@ -3,6 +3,7 @@ Carsten Bormann <cabo@tzi.org>
 :doctype: internet-draft
 :abbrev: mfld
 :name: draft-mfld-00
+:docnumber: draft-mfld-00
 :status: informational
 :intended-series: informational
 :toc-include: yes

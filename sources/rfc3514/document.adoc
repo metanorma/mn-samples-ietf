@@ -5,6 +5,7 @@ Steven M. Bellovin <bellovin@acm.org>
 :status: info
 :intended-series: informational
 :name: rfc-3514
+:docnumber: 3514
 :ipr: trust200902
 :area: Internet
 :workgroup: Network Working Group

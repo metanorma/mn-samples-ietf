@@ -2,6 +2,7 @@
 A
 :doctype: internet-draft
 :name: draft-killer-rabbit-00
+:docnumber: draft-killer-rabbit-00
 :status: informational
 :intended-series: informational
 :fullname: A
