@@ -32,6 +32,11 @@ drafting, review, and discussion of this memo.
 <<RFC2119,RFC 2119>>
 <<RFC2119,format=counter: RFC 2119>>
 
+== Discussion
+
+This clause exists so that the document body is not empty: the
+Metanorma grammar requires at least one body clause.
+
 [bibliography]
 == Normative References
 

@@ -19,6 +19,11 @@ of all the creatures. Short of sanctified ordnance such as
 <<holy_hand_grenade,format=title>>, there are few remedies
 known against its awful lapine powers.
 
+== Discussion
+
+This clause exists so that the document body is not empty: the
+Metanorma grammar requires at least one body clause.
+
 [[holy_hand_grenade]]
 [bibliography]
 == Normative references
