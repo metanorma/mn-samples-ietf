@@ -26,6 +26,7 @@ Editor name <Editor email>
 :rfcedstyle: yes
 :comments: yes
 :inline: yes
+:mn-document-class: ietf
 
 [[CREF1: This template is for authors of IETF specifications containing MIB modules.  This template can be used as a starting point to produce specifications that comply with the Operations & Management Area guidelines for MIB module internet drafts. Throughout the template, the marker "[TEMPLATE TODO]" is used as a placeholder to indicate an element or text that requires replacement or removal. All the places with [TEMPLATE TODO] markers should be replaced or removed before the document is submitted.]]
 

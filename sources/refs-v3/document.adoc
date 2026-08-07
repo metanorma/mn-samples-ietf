@@ -31,6 +31,7 @@ Simon Perreault <simon.perreault@viagenie.ca>
 :code_2: MA 02238
 :uri_2: http://opoudjis.net
 :link: http://example1.com,http://example2.com author
+:mn-document-class: ietf
 
 == Introduction
 The authors would like to thank Tim Howes, Mark Smith, and Frank

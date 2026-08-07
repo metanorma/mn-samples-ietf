@@ -27,6 +27,7 @@ Simon Perreault <simon.perreault@viagenie.ca>
 :ipr: pre5378Trust200902
 :inline-definition-lists: true
 :comments: yes
+:mn-document-class: ietf
 
 This document defines the vCard data format for representing and
 exchanging a variety of information about individuals and other

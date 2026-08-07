@@ -31,6 +31,7 @@ Joe Hildebrand <joe-ietf@cursive.net>; Paul Hoffman <paul.hoffman@icann.org>
 :email_2: paul.hoffman@icann.org
 :revdate: 2016-12
 :keyword: html,css,rfc
+:mn-document-class: ietf
 
 In order to meet the evolving needs of the Internet community, the
 canonical format for RFCs is changing from a plain-text, ASCII-only format to an

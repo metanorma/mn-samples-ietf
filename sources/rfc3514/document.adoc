@@ -21,6 +21,7 @@ Steven M. Bellovin <bellovin@acm.org>
 :code: NJ 07932
 :smart-quotes: false
 :inline-definition-lists: true
+:mn-document-class: ietf
 
 Firewalls, packet filters, intrusion detection systems, and the like
 often have difficulty distinguishing between packets that have

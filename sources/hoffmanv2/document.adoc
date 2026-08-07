@@ -40,6 +40,7 @@ Chris Smith <chrissmith@example.com>; Kim Jones <jk@lmn.op>
 :subcompact: no
 :strict: yes
 :rfc2629xslt: true
+:mn-document-class: ietf
 
 This is an example of an abstract.  It is a short paragraph that
 gives an overview of the document in order to help the reader

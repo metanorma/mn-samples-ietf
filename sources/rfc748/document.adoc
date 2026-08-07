@@ -15,6 +15,7 @@ M. Crispin
 :initials: M.
 :organization: SU-AI
 :smart-quotes: false
+:mn-document-class: ietf
 
 == Command name and code
 

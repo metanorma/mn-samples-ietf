@@ -22,6 +22,7 @@ Carsten Bormann <cabo@tzi.org>
 :revdate: 2017-11-03
 :comments: yes
 :rfc2629xslt: true
+:mn-document-class: ietf
 
 insert abstract here
 
