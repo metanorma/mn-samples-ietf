@@ -33,6 +33,7 @@ Klaus Hartke <hartke@tzi.org>; Carsten Bormann <cabo@tzi.org>
 :phone_2: +49-421-218-63921
 :fax_2: +49-421-218-7000
 :rfc2629xslt: true
+:mn-document-class: ietf
 
 NAT (Network Address Translator) Traversal may require TURN
 (Traversal Using Relays around NAT) functionality in certain

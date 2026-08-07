@@ -20,6 +20,7 @@ David Waitzman <dwaitzman@BBN.COM>
 :city: Cambridge
 :code: MA 02238
 :smart-quotes: false
+:mn-document-class: ietf
 
 [[overview-and-rational]]
 == Overview and Rational

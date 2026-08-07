@@ -19,6 +19,7 @@ Maximilian Wilhelm <max@rfc2324.org>
 :city: Paderborn, NRW
 :country: Germany
 :smart-quotes: false
+:mn-document-class: ietf
 
 This document specifies a new routing scheme for the current version
 of the Internet Protocol version 6 (IPv6) in the spirit of "Green

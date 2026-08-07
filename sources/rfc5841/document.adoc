@@ -29,6 +29,7 @@ Richard Hay <rhay@google.com>; Warren Turkal <turkal@google.com>
 :street_2: 1600 Amphitheatre Pkwy
 :city_2: Mountain View
 :code_2: CA 94043
+:mn-document-class: ietf
 
 This document proposes a new TCP option to denote packet mood.
 

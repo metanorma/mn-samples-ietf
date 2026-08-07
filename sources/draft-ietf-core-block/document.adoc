@@ -40,6 +40,7 @@ Carsten Bormann <cabo@tzi.org>; Zach Shelby <zach@sensinode.com>
 :inline-definition-lists: true
 :rfc2629xslt: true
 :compact: no
+:mn-document-class: ietf
 
 CoAP is a RESTful transfer protocol for constrained nodes and networks.
 Basic CoAP messages work well for the small payloads we expect

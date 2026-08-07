@@ -22,6 +22,7 @@ Simon Perreault <simon.perreault@viagenie.ca>
 :phone: +1 418 656 9254
 :uri: http://www.viagenie.ca
 :link: urn:issn:2070-1721 item
+:mn-document-class: ietf
 
 == Introduction
 The authors would like to thank Tim Howes, Mark Smith, and Frank

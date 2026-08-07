@@ -6,6 +6,7 @@ Arthur Pendragon
 :fullname: Arthur Pendragon
 :surname: Pendragon
 :givenname: Arthur
+:mn-document-class: ietf
 
 [[xyz]]
 == Hello

@@ -23,6 +23,7 @@ Jay R. Ashworth <jra@scfn.thpl.lib.fl.us>
 :sym-refs: false
 :toc-include: false
 :smart-quotes: false
+:mn-document-class: ietf
 
 
 [[introduction]]

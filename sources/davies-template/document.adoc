@@ -25,6 +25,7 @@ Elwyn Davies <elwynd@dial.pipex.com>
 :compact: yes
 :subcompact: no
 :rfc2629xslt: true
+:mn-document-class: ietf
 
 Insert an abstract: MANDATORY. This template is for creating an
 Internet Draft.
