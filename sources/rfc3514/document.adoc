@@ -8,7 +8,7 @@ Steven M. Bellovin <bellovin@acm.org>
 :ipr: trust200902
 :area: Internet
 :workgroup: Network Working Group
-:revdate: 2003-04-01T00:00:00Z
+:revdate: 2003-04-01
 :fullname: Steven M. Bellovin
 :surname: Bellovin
 :givenname: Steven

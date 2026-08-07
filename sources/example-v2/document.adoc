@@ -12,7 +12,7 @@ David Waitzman <dwaitzman@BBN.COM>; Nick Nicholas <opoudjis@gmail.com>
 :area: Internet
 :workgroup: Network Working Group
 :keyword: this, that
-:revdate: 1990-04-01T00:00:00Z
+:revdate: 1990-04-01
 :fullname: David Waitzman
 :surname: Waitzman
 :givenname: David

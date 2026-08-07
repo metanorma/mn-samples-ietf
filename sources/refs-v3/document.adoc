@@ -12,7 +12,7 @@ Simon Perreault <simon.perreault@viagenie.ca>
 :area: Internet
 :workgroup: Network Working Group
 :keyword: this, that
-:revdate: 1990-04-01T00:00:00Z
+:revdate: 1990-04-01
 :fullname: Simon Perreault
 :surname: Perreault
 :givenname: Simon

@@ -9,7 +9,7 @@ Richard Hay <rhay@google.com>; Warren Turkal <turkal@google.com>
 :ipr: trust200902
 :area: Internet
 :workgroup: Network Working Group
-:revdate: 2010-04-01T00:00:00Z
+:revdate: 2010-04-01
 :fullname: Richard Hay
 :surname: Hay
 :givenname: Richard
