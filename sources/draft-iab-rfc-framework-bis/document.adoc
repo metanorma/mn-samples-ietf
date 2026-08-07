@@ -2,6 +2,7 @@
 Heather Flanagan <rse@rfc-editor.org>
 :doctype: internet-draft
 :name: draft-iab-rfc-framework-06
+:docnumber: draft-iab-rfc-framework-06
 :status: informational
 :intended-series: informational
 :ipr: trust200902

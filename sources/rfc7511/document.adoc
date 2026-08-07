@@ -9,7 +9,7 @@ Maximilian Wilhelm <max@rfc2324.org>
 :ipr: trust200902
 :area: Internet
 :workgroup: Network Working Group
-:revdate: 2015-04-01T00:00:00Z
+:revdate: 2015-04-01
 :fullname: Maximilian Wilhelm
 :surname: Wilhelm
 :givenname: Maximilian

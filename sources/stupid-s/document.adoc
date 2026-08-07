@@ -3,6 +3,7 @@ Klaus Hartke <hartke@tzi.org>; Carsten Bormann <cabo@tzi.org>
 :doctype: internet-draft
 :abbrev: STuPiD
 :name: draft-hartke-xmpp-stupid-00
+:docnumber: draft-hartke-xmpp-stupid-00
 :revdate: 2009-07-05
 :status: informational
 :intended-series: informational

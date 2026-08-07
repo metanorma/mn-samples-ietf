@@ -1,6 +1,7 @@
 = The Holy Hand Grenade of Antioch
 Arthur Pendragon
 :doctype: internet-draft
+:docnumber: draft-biblio-insert-v3-00
 :workgroup: silly
 :fullname: Arthur Pendragon
 :surname: Pendragon

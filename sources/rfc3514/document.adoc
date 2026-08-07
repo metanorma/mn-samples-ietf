@@ -5,10 +5,11 @@ Steven M. Bellovin <bellovin@acm.org>
 :status: info
 :intended-series: informational
 :name: rfc-3514
+:docnumber: 3514
 :ipr: trust200902
 :area: Internet
 :workgroup: Network Working Group
-:revdate: 2003-04-01T00:00:00Z
+:revdate: 2003-04-01
 :fullname: Steven M. Bellovin
 :surname: Bellovin
 :givenname: Steven

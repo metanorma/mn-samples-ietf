@@ -4,6 +4,7 @@ Editor name <Editor email>
 :status: historic
 :intended-series: historic
 :name: Your MIB Document name here rev07
+:docnumber: draft-mib-doc-template-07
 :ipr: trust200902
 :abbrev: Your MIB Module document name
 :fullname: Editor Name
